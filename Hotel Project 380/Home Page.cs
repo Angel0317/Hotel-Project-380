@@ -139,7 +139,7 @@ namespace Hotel_Project_380
         {
             if (this.panelMenu.Width > 200)
             {//Mimizes the Menu
-                panelMenu.Width = 65;
+                panelMenu.Width = 67;
                 pictureBox1.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
@@ -165,7 +165,9 @@ namespace Hotel_Project_380
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            New_Reservation reservation = new New_Reservation();
+            reservation.ShowDialog();
         }
     }
 }
