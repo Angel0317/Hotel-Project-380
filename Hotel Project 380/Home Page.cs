@@ -163,11 +163,43 @@ namespace Hotel_Project_380
             }
         }
 
+
+
+        public void loadform(object Form)
+        {
+            if (this.panelDesktop.Controls.Count > 0)
+                this.panelDesktop.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(f);
+            this.panelDesktop.Tag = f;
+            f.Show();
+
+        }
+
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            New_Reservation reservation = new New_Reservation();
-            reservation.ShowDialog();
+            loadform(new New_Reservation());
+        }
+        private void iconButton3_Click_1(object sender, EventArgs e)
+        {
+            loadform(new About());
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            loadform(new Edit());
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            loadform(new Cart());
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            loadform(new Profile());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Hotel_Project_380
 {
-    partial class New_Reservation
+    partial class Profile
     {
         /// <summary>
         /// Required designer variable.
@@ -33,16 +33,18 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(316, 204);
+            this.label1.Location = new System.Drawing.Point(360, 193);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Reservation";
+            this.label1.Size = new System.Drawing.Size(73, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Profile";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // New_Reservation
+            // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -50,9 +52,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "New_Reservation";
-            this.Text = "New_Reservation";
-            this.Load += new System.EventHandler(this.New_Reservation_Load);
+            this.Name = "Profile";
+            this.Text = "Profile";
             this.ResumeLayout(false);
             this.PerformLayout();
 
