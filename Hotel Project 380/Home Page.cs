@@ -174,12 +174,14 @@ namespace Hotel_Project_380
             f.Dock = DockStyle.Fill;
             this.panelDesktop.Controls.Add(f);
             this.panelDesktop.Tag = f;
+            f.BringToFront();
             f.Show();
 
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
+           
             loadform(new New_Reservation());
         }
         private void iconButton3_Click_1(object sender, EventArgs e)
@@ -200,6 +202,11 @@ namespace Hotel_Project_380
         private void iconButton6_Click(object sender, EventArgs e)
         {
             loadform(new Profile());
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
