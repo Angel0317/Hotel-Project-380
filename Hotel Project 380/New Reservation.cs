@@ -21,5 +21,45 @@ namespace Hotel_Project_380
         {
 
         }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customTextBox1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customTextBox1__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customTextBox2__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customTextBox1__TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
