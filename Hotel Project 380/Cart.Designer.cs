@@ -46,12 +46,12 @@
             this.Summary = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.endDate = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.checkIn = new System.Windows.Forms.Label();
-            this.roomType = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.endDate = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.roomType = new System.Windows.Forms.Label();
+            this.checkIn = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -300,6 +300,15 @@
             this.label13.Text = "Room and Guests";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(390, 155);
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
             // endDate
             // 
             this.endDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -313,49 +322,6 @@
             this.endDate.TabIndex = 33;
             this.endDate.Tag = "endDate";
             this.endDate.Text = "End Date";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(204, 405);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 26);
-            this.label11.TabIndex = 32;
-            this.label11.Tag = "";
-            this.label11.Text = "-";
-            // 
-            // checkIn
-            // 
-            this.checkIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkIn.AutoSize = true;
-            this.checkIn.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkIn.Location = new System.Drawing.Point(37, 405);
-            this.checkIn.Name = "checkIn";
-            this.checkIn.Size = new System.Drawing.Size(114, 26);
-            this.checkIn.TabIndex = 31;
-            this.checkIn.Tag = "startDate";
-            this.checkIn.Text = "Start Date\r\n";
-            // 
-            // roomType
-            // 
-            this.roomType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.roomType.AutoSize = true;
-            this.roomType.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomType.Location = new System.Drawing.Point(37, 200);
-            this.roomType.Name = "roomType";
-            this.roomType.Size = new System.Drawing.Size(160, 26);
-            this.roomType.TabIndex = 30;
-            this.roomType.Tag = "roomTypeCart";
-            this.roomType.Text = "Room Details:";
-            this.roomType.Click += new System.EventHandler(this.roomType_Click);
             // 
             // label8
             // 
@@ -374,14 +340,48 @@
             this.label8.Text = "Stay Date\'s";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // label11
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(390, 155);
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(204, 405);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 26);
+            this.label11.TabIndex = 32;
+            this.label11.Tag = "";
+            this.label11.Text = "-";
+            // 
+            // roomType
+            // 
+            this.roomType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.roomType.AutoSize = true;
+            this.roomType.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomType.Location = new System.Drawing.Point(37, 200);
+            this.roomType.Name = "roomType";
+            this.roomType.Size = new System.Drawing.Size(160, 26);
+            this.roomType.TabIndex = 30;
+            this.roomType.Tag = "roomTypeCart";
+            this.roomType.Text = "Room Details:";
+            this.roomType.Click += new System.EventHandler(this.roomType_Click);
+            // 
+            // checkIn
+            // 
+            this.checkIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkIn.AutoSize = true;
+            this.checkIn.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkIn.Location = new System.Drawing.Point(37, 405);
+            this.checkIn.Name = "checkIn";
+            this.checkIn.Size = new System.Drawing.Size(114, 26);
+            this.checkIn.TabIndex = 31;
+            this.checkIn.Tag = "startDate";
+            this.checkIn.Text = "Start Date\r\n";
             // 
             // textBox7
             // 
@@ -486,6 +486,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Cart";
             this.Text = "Cart";
+            this.Load += new System.EventHandler(this.Cart_Load);
             this.Summary.ResumeLayout(false);
             this.Summary.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

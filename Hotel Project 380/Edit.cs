@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace Hotel_Project_380
 {
     public partial class Edit : Form
     {
-        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\Student.IT - STULOAN - 714.004\Documents\GitHub\Hotel - Project - 380\Hotel Project 380\Edit.mdf;Integrated Security=True;Connect Timeout=30");
+        /*
+         * Connect Sql Server data for all relevant reservation information
+         */
 
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Documents\Hoteldb.mdf;Integrated Security=True;Connect Timeout=30");
+       
         public Edit()
         {
             InitializeComponent();
@@ -44,6 +48,11 @@ namespace Hotel_Project_380
              * in data table for a matching reservation, if found the results will display
              * in checkbox form on the right
              */
+            Con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Reservation_Table where ReservationId = '"+reservationidtb.Text+"' and firstName = '"+firstnametb.Text+"' and lastName = '"+lastnametb.Text+"' and Checkin = '"+reservationidtb.Text+"' ",Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            Con.Close();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

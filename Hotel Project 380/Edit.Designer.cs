@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.reservationidtb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lastnametb = new System.Windows.Forms.TextBox();
+            this.firstnametb = new System.Windows.Forms.TextBox();
             this.Reservationtb = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkintb = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -57,14 +57,14 @@
             this.label1.Text = "Reservation ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // reservationidtb
             // 
-            this.textBox1.Location = new System.Drawing.Point(271, 146);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 36);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.reservationidtb.Location = new System.Drawing.Point(271, 146);
+            this.reservationidtb.Multiline = true;
+            this.reservationidtb.Name = "reservationidtb";
+            this.reservationidtb.Size = new System.Drawing.Size(272, 36);
+            this.reservationidtb.TabIndex = 1;
+            this.reservationidtb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -94,23 +94,23 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Last Name:";
             // 
-            // textBox2
+            // lastnametb
             // 
-            this.textBox2.Location = new System.Drawing.Point(271, 266);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(272, 36);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.lastnametb.Location = new System.Drawing.Point(271, 266);
+            this.lastnametb.Multiline = true;
+            this.lastnametb.Name = "lastnametb";
+            this.lastnametb.Size = new System.Drawing.Size(272, 36);
+            this.lastnametb.TabIndex = 4;
+            this.lastnametb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // firstnametb
             // 
-            this.textBox3.Location = new System.Drawing.Point(271, 206);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(272, 36);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.firstnametb.Location = new System.Drawing.Point(271, 206);
+            this.firstnametb.Multiline = true;
+            this.firstnametb.Name = "firstnametb";
+            this.firstnametb.Size = new System.Drawing.Size(272, 36);
+            this.firstnametb.TabIndex = 5;
+            this.firstnametb.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // Reservationtb
             // 
@@ -158,16 +158,16 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Check In Date:";
             // 
-            // dateTimePicker1
+            // checkintb
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(271, 333);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2000, 2, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(272, 40);
-            this.dateTimePicker1.TabIndex = 11;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.checkintb.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkintb.Location = new System.Drawing.Point(271, 333);
+            this.checkintb.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.checkintb.MinDate = new System.DateTime(2000, 2, 1, 0, 0, 0, 0);
+            this.checkintb.Name = "checkintb";
+            this.checkintb.Size = new System.Drawing.Size(272, 40);
+            this.checkintb.TabIndex = 11;
+            this.checkintb.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // Edit
             // 
@@ -175,16 +175,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1464, 692);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.checkintb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.Reservationtb);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.firstnametb);
+            this.Controls.Add(this.lastnametb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.reservationidtb);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -199,15 +199,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox reservationidtb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox lastnametb;
+        private System.Windows.Forms.TextBox firstnametb;
         private System.Windows.Forms.Button Reservationtb;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker checkintb;
     }
 }
