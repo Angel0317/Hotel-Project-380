@@ -74,11 +74,11 @@ namespace Hotel_Project_380
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            /*
             conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\amari\Documents\Hoteldb.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
             cmd = new SqlCommand("INSERT INTO Reservation_Table (Firstname,lastname,emailadress,address,zip,state,datein,dateout,RoomDetails,days) VALUES (@Firstname,@lastname,@emailadress,@address,@zip,@state,@datein,@dateout,@RoomDetails,@days)", conn);
-
+            
             cmd.Parameters.Add("@Firstname", textBox3.Text);
             cmd.Parameters.Add("@lastname", textBox1.Text);
             cmd.Parameters.Add("@emailadress", textBox2.Text);
@@ -88,7 +88,7 @@ namespace Hotel_Project_380
             cmd.Parameters.Add("@datein", datein.Text);
             cmd.Parameters.Add("@dateout", dateout.Text);
             cmd.Parameters.Add("@RoomDetails", RoomDet);
-
+            
             DateTime d1 = dateout.Value;
             DateTime d2 = datein.Value;
             TimeSpan time = d1 - d2;
@@ -106,8 +106,8 @@ namespace Hotel_Project_380
             Cart form = new Cart();
             form.Show();
 
-            Cart.instance.lab1.Text = textBox3.Text;
-
+            //Cart.instance.lab1.Text = textBox3.Text;
+            */
 
         }
 
@@ -128,7 +128,7 @@ namespace Hotel_Project_380
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Cart.instance.lab1.Text = textBox3.Text;
+            //Cart.instance.lab1.Text = textBox3.Text;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
