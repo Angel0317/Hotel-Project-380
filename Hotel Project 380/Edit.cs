@@ -18,7 +18,25 @@ namespace Hotel_Project_380
          */
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Documents\Hoteldb.mdf;Integrated Security=True;Connect Timeout=30");
-       
+        public void populate()
+        {
+            /*
+             * This function will put the found reservation into the checkbox for user to select to cancel
+             */
+
+            Con.Open();
+            string Myquery = "select * from Reservation_Table";
+            SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+            SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            reservationCheckBoxEdit.DataSource = ds.Tables[0];
+            if(ds.Tables[0].Rows.Count > 0)
+            {
+                MessageBox.Show("Banananas");
+            }
+            Con.Close();
+        }
         public Edit()
         {
             InitializeComponent();
@@ -56,6 +74,16 @@ namespace Hotel_Project_380
             if (dt.Rows[0][0].ToString() == "1")
             {
                 MessageBox.Show("Reservation Found!");
+                string Myquery = "select * from Reservation_Table";
+                SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+                SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
+                var ds = new DataSet();
+                da.Fill(ds);
+                reservationCheckBoxEdit.DataSource = ds.Tables[0];
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    MessageBox.Show("Table found, Sending data to checkbox");
+                }
             }
             else
             {
