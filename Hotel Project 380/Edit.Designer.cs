@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.reservationidtb = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lastnametb = new System.Windows.Forms.TextBox();
-            this.firstnametb = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.Reservationtb = new System.Windows.Forms.Button();
-            this.reservationCheckBoxEdit = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkintb = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -56,9 +56,8 @@
             this.label1.Text = "Reservation ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // reservationidtb
+            // textBox1
             // 
-
             this.textBox1.Location = new System.Drawing.Point(181, 95);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
@@ -93,7 +92,7 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Last Name:";
             // 
-            // lastnametb
+            // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(181, 173);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -103,7 +102,7 @@
             this.textBox2.TabIndex = 4;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // firstnametb
+            // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(181, 134);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -124,7 +123,7 @@
             this.Reservationtb.UseVisualStyleBackColor = true;
             this.Reservationtb.Click += new System.EventHandler(this.button1_Click);
             // 
-            // reservationCheckBoxEdit
+            // checkedListBox1
             // 
             this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.checkedListBox1.Font = new System.Drawing.Font("Forte", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,7 +160,7 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Check In Date:";
             // 
-            // checkintb
+            // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(181, 216);
@@ -182,13 +181,13 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.reservationCheckBoxEdit);
+            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.Reservationtb);
-            this.Controls.Add(this.firstnametb);
-            this.Controls.Add(this.lastnametb);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.reservationidtb);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Edit";
@@ -202,15 +201,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox reservationidtb;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox lastnametb;
-        private System.Windows.Forms.TextBox firstnametb;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button Reservationtb;
-        private System.Windows.Forms.CheckedListBox reservationCheckBoxEdit;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker checkintb;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
