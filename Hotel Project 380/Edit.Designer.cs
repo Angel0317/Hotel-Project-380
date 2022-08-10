@@ -35,7 +35,7 @@
             this.lastnametb = new System.Windows.Forms.TextBox();
             this.firstnametb = new System.Windows.Forms.TextBox();
             this.Reservationtb = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.reservationCheckBoxEdit = new System.Windows.Forms.CheckedListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.checkintb = new System.Windows.Forms.DateTimePicker();
@@ -122,16 +122,16 @@
             this.Reservationtb.UseVisualStyleBackColor = true;
             this.Reservationtb.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkedListBox1
+            // reservationCheckBoxEdit
             // 
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.checkedListBox1.Font = new System.Drawing.Font("Forte", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(614, 145);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(619, 546);
-            this.checkedListBox1.TabIndex = 7;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            this.reservationCheckBoxEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.reservationCheckBoxEdit.Font = new System.Drawing.Font("Forte", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reservationCheckBoxEdit.FormattingEnabled = true;
+            this.reservationCheckBoxEdit.Location = new System.Drawing.Point(614, 145);
+            this.reservationCheckBoxEdit.Name = "reservationCheckBoxEdit";
+            this.reservationCheckBoxEdit.Size = new System.Drawing.Size(619, 546);
+            this.reservationCheckBoxEdit.TabIndex = 7;
+            this.reservationCheckBoxEdit.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -178,7 +178,7 @@
             this.Controls.Add(this.checkintb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.reservationCheckBoxEdit);
             this.Controls.Add(this.Reservationtb);
             this.Controls.Add(this.firstnametb);
             this.Controls.Add(this.lastnametb);
@@ -205,7 +205,7 @@
         private System.Windows.Forms.TextBox lastnametb;
         private System.Windows.Forms.TextBox firstnametb;
         private System.Windows.Forms.Button Reservationtb;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox reservationCheckBoxEdit;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker checkintb;

@@ -49,10 +49,20 @@ namespace Hotel_Project_380
              * in checkbox form on the right
              */
             Con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Reservation_Table where ReservationId = '"+reservationidtb.Text+"' and firstName = '"+firstnametb.Text+"' and lastName = '"+lastnametb.Text+"' and Checkin = '"+reservationidtb.Text+"' ",Con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Reservation_Table where ReservationId = '"+reservationidtb.Text+"' " +
+                "and firstName = '"+firstnametb.Text+"' and lastName = '"+lastnametb.Text+"' ",Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                MessageBox.Show("Reservation Found!");
+            }
+            else
+            {
+                MessageBox.Show("Cannot find reservation, please try again :)");
+            }
             Con.Close();
+            //and Checkin = '"+checkintb+"'
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -76,6 +86,7 @@ namespace Hotel_Project_380
              * All reservations that have been found with matching resID, name and checkin 
              * will appear here for guest to select
              */
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
