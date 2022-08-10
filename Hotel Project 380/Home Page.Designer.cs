@@ -64,6 +64,7 @@
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 649);
             this.panelMenu.TabIndex = 0;
@@ -105,8 +106,8 @@
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton8.Location = new System.Drawing.Point(0, 602);
             this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton8.Size = new System.Drawing.Size(230, 47);
+            this.iconButton8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.iconButton8.Size = new System.Drawing.Size(345, 72);
             this.iconButton8.TabIndex = 7;
             this.iconButton8.Tag = "Sign Out";
             this.iconButton8.Text = "iconButton8";
@@ -126,10 +127,11 @@
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.IconSize = 46;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 288);
+            this.iconButton6.Location = new System.Drawing.Point(0, 442);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton6.Size = new System.Drawing.Size(230, 47);
+            this.iconButton6.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.iconButton6.Size = new System.Drawing.Size(345, 72);
             this.iconButton6.TabIndex = 5;
             this.iconButton6.Tag = "Profile";
             this.iconButton6.Text = "iconButton6";
@@ -150,10 +152,11 @@
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 46;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 241);
+            this.iconButton5.Location = new System.Drawing.Point(0, 370);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton5.Size = new System.Drawing.Size(230, 47);
+            this.iconButton5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.iconButton5.Size = new System.Drawing.Size(345, 72);
             this.iconButton5.TabIndex = 4;
             this.iconButton5.Tag = "Cart";
             this.iconButton5.Text = "iconButton5";
@@ -173,10 +176,11 @@
             this.iconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 194);
+            this.iconButton4.Location = new System.Drawing.Point(0, 298);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton4.Size = new System.Drawing.Size(230, 47);
+            this.iconButton4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.iconButton4.Size = new System.Drawing.Size(345, 72);
             this.iconButton4.TabIndex = 3;
             this.iconButton4.Tag = "Edit/Cancel";
             this.iconButton4.Text = "iconButton4";
@@ -196,10 +200,11 @@
             this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 147);
+            this.iconButton3.Location = new System.Drawing.Point(0, 226);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(230, 47);
+            this.iconButton3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.iconButton3.Size = new System.Drawing.Size(345, 72);
             this.iconButton3.TabIndex = 2;
             this.iconButton3.Tag = "About Us";
             this.iconButton3.Text = "iconButton3";
@@ -219,10 +224,11 @@
             this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 100);
+            this.iconButton2.Location = new System.Drawing.Point(0, 154);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(230, 47);
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.iconButton2.Size = new System.Drawing.Size(345, 72);
             this.iconButton2.TabIndex = 1;
             this.iconButton2.Tag = "New Reservation";
             this.iconButton2.Text = "iconButton2";
@@ -238,8 +244,9 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 100);
+            this.panel1.Size = new System.Drawing.Size(345, 154);
             this.panel1.TabIndex = 0;
             // 
             // btnMenu
@@ -250,9 +257,10 @@
             this.btnMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 30;
-            this.btnMenu.Location = new System.Drawing.Point(170, 0);
+            this.btnMenu.Location = new System.Drawing.Point(255, 0);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(60, 60);
+            this.btnMenu.Size = new System.Drawing.Size(90, 92);
             this.btnMenu.TabIndex = 0;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
@@ -262,8 +270,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(231, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -275,7 +284,8 @@
             this.panelTitleBar.Controls.Add(this.btnMaximize);
             this.panelTitleBar.Controls.Add(this.btnClose);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(230, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(345, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1092, 60);
             this.panelTitleBar.TabIndex = 1;
@@ -294,7 +304,7 @@
             this.btnMinimize.IconSize = 20;
             this.btnMinimize.Location = new System.Drawing.Point(962, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
+            this.btnMinimize.Size = new System.Drawing.Size(68, 38);
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.iconButton10_Click);
@@ -311,7 +321,7 @@
             this.btnMaximize.IconSize = 20;
             this.btnMaximize.Location = new System.Drawing.Point(1004, 0);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(45, 25);
+            this.btnMaximize.Size = new System.Drawing.Size(68, 38);
             this.btnMaximize.TabIndex = 2;
             this.btnMaximize.UseVisualStyleBackColor = false;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -328,7 +338,7 @@
             this.btnClose.IconSize = 20;
             this.btnClose.Location = new System.Drawing.Point(1046, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 25);
+            this.btnClose.Size = new System.Drawing.Size(68, 38);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.iconButton7_Click);
@@ -339,7 +349,8 @@
             this.panelDesktop.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 60);
+            this.panelDesktop.Location = new System.Drawing.Point(345, 92);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
             this.panelDesktop.Size = new System.Drawing.Size(1092, 589);
@@ -348,13 +359,14 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1322, 649);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panelMenu.ResumeLayout(false);
