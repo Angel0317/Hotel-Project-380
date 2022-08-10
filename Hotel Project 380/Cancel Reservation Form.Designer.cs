@@ -35,6 +35,7 @@ namespace Hotel_Project_380
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -108,11 +109,29 @@ namespace Hotel_Project_380
             this.button2.Text = "Change";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Forte", 15F);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 22;
+            this.listBox1.Items.AddRange(new object[] {
+            "Reservation 1",
+            "",
+            "Reservation 2",
+            "",
+            "Reservation 3"});
+            this.listBox1.Location = new System.Drawing.Point(471, 133);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(335, 312);
+            this.listBox1.TabIndex = 7;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // Cancel_Reservation_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 480);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -135,5 +154,6 @@ namespace Hotel_Project_380
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
