@@ -41,5 +41,10 @@ namespace Hotel_Project_380
         {
 
         }
+
+        private void Cart_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
