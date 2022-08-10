@@ -74,6 +74,11 @@ namespace Hotel_Project_380
             if (dt.Rows[0][0].ToString() == "1")
             {
                 MessageBox.Show("Reservation Found!");
+
+                /*
+                 * if a reservation is found, the data from table will now be displayed on the checkbox 
+                 * on the right of the form
+                 */
                 string Myquery = "select * from Reservation_Table";
                 SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
                 SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
