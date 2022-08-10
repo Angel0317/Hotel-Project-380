@@ -170,6 +170,7 @@ namespace Hotel_Project_380
             if (this.panelDesktop.Controls.Count > 0)
                 this.panelDesktop.Controls.RemoveAt(0);
             Form f = Form as Form;
+        
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.panelDesktop.Controls.Add(f);
@@ -206,6 +207,12 @@ namespace Hotel_Project_380
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            
 
         }
     }
