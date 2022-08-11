@@ -7,4 +7,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="ReservationID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="ab3f431b-46d8-43c2-b7d2-4f648e4904d9" ChangeDateTime="08/11/2022 22:18:31">
+    <Property Name="ElementName" Value="[dbo].[Reservation_Table].[Checkin]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Reservation_Table]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateOut" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="95cb485e-cc02-434f-ad4b-9e1f2dace553" ChangeDateTime="08/11/2022 22:18:40">
+    <Property Name="ElementName" Value="[dbo].[Reservation_Table].[Checkout]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Reservation_Table]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateIn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c8a489de-6e94-4435-b5c8-34597b7e5099" ChangeDateTime="08/11/2022 23:20:21">
+    <Property Name="ElementName" Value="[dbo].[Reservation_Table].[Room]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Reservation_Table]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RoomNumber" />
+  </Operation>
 </Operations>
