@@ -39,6 +39,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.checkintb = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -62,7 +63,7 @@
             this.reservationidtb.Location = new System.Drawing.Point(290, 154);
             this.reservationidtb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.reservationidtb.Name = "reservationidtb";
-            this.reservationidtb.Size = new System.Drawing.Size(148, 26);
+            this.reservationidtb.Size = new System.Drawing.Size(272, 26);
             this.reservationidtb.TabIndex = 14;
             // 
             // label2
@@ -98,7 +99,7 @@
             this.lastnametb.Location = new System.Drawing.Point(290, 274);
             this.lastnametb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastnametb.Name = "lastnametb";
-            this.lastnametb.Size = new System.Drawing.Size(148, 26);
+            this.lastnametb.Size = new System.Drawing.Size(272, 26);
             this.lastnametb.TabIndex = 13;
             // 
             // firstnametb
@@ -106,14 +107,14 @@
             this.firstnametb.Location = new System.Drawing.Point(290, 214);
             this.firstnametb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstnametb.Name = "firstnametb";
-            this.firstnametb.Size = new System.Drawing.Size(148, 26);
+            this.firstnametb.Size = new System.Drawing.Size(272, 26);
             this.firstnametb.TabIndex = 12;
             // 
             // Reservationtb
             // 
             this.Reservationtb.Location = new System.Drawing.Point(272, 402);
             this.Reservationtb.Name = "Reservationtb";
-            this.Reservationtb.Size = new System.Drawing.Size(93, 40);
+            this.Reservationtb.Size = new System.Drawing.Size(134, 40);
             this.Reservationtb.TabIndex = 6;
             this.Reservationtb.Text = "Lookup";
             this.Reservationtb.UseVisualStyleBackColor = true;
@@ -159,12 +160,20 @@
             this.checkintb.Size = new System.Drawing.Size(200, 26);
             this.checkintb.TabIndex = 0;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(290, 334);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(272, 26);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2050, 983);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.reservationCheckBoxEdit);
@@ -198,5 +207,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker checkintb;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
