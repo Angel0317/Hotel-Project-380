@@ -132,6 +132,7 @@
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(164, 25);
             this.lastName.TabIndex = 7;
+
             // 
             // label4
             // 
@@ -141,6 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.label4.Location = new System.Drawing.Point(50, 224);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 24);
@@ -233,6 +235,7 @@
             this.Summary.TabStop = false;
             this.Summary.Text = "Summary";
             // 
+
             // room
             // 
             this.room.AutoSize = true;
@@ -349,8 +352,7 @@
             this.checkIn.Tag = "startDate";
             this.checkIn.Text = "Check In:";
             this.checkIn.Click += new System.EventHandler(this.checkIn_Click);
-            // 
-            // label9
+            // label3
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -575,6 +577,7 @@
         }
 
         #endregion
+
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

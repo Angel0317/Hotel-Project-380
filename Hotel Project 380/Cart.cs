@@ -14,6 +14,7 @@ namespace Hotel_Project_380
 
     public partial class Cart : Form
     {
+<
         SqlConnection cart = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\angel\OneDrive\Documents\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
         public static Cart instance;
         public Label lab1;
@@ -22,7 +23,6 @@ namespace Hotel_Project_380
         public Label lab4;
         public Label lab5;
         public PictureBox pic;
-
         public Cart()
         {
             InitializeComponent();
@@ -33,7 +33,6 @@ namespace Hotel_Project_380
             lab4 = leavedate;
             lab5 = Total;
             pic = pictureBox1;
-
         }
 
         private void label1_Click(object sender, EventArgs e)
