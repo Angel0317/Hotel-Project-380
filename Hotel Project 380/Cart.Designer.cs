@@ -372,7 +372,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cart";
             this.Text = "Cart";
-            this.Load += new System.EventHandler(this.Cart_Load);
+            //is.Load += new System.EventHandler(this.Cart_Load);
             this.Summary.ResumeLayout(false);
             this.Summary.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
