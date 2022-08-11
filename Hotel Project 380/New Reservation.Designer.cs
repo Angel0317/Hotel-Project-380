@@ -29,117 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_Reservation));
-            this.phoneTextBox = new Hotel_Project_380.CustomTextBox();
-            this.nameTextBox = new Hotel_Project_380.CustomTextBox();
-            this.emailTextBox = new Hotel_Project_380.CustomTextBox();
-            this.addressTextBox = new Hotel_Project_380.CustomTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.DOBTextBox = new Hotel_Project_380.CustomTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.roomType = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radiobtnPres = new System.Windows.Forms.RadioButton();
             this.radioBtnPentHouse = new System.Windows.Forms.RadioButton();
             this.radioBtnSuite = new System.Windows.Forms.RadioButton();
             this.radioBtnStudio = new System.Windows.Forms.RadioButton();
+            this.guestnum = new System.Windows.Forms.ComboBox();
+            this.Guest = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.roomType.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.phoneTextBox.BorderColor = System.Drawing.Color.MediumPurple;
-            this.phoneTextBox.BorderFocusColor = System.Drawing.Color.GreenYellow;
-            this.phoneTextBox.BorderRadius = 16;
-            this.phoneTextBox.BorderSize = 2;
-            this.phoneTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTextBox.ForeColor = System.Drawing.Color.Black;
-            this.phoneTextBox.Location = new System.Drawing.Point(73, 117);
-            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.phoneTextBox.Multiline = false;
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.phoneTextBox.PasswordChar = false;
-            this.phoneTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.phoneTextBox.PlaceholderText = "Phone Number";
-            this.phoneTextBox.Size = new System.Drawing.Size(250, 36);
-            this.phoneTextBox.TabIndex = 5;
-            this.phoneTextBox.Texts = "";
-            this.phoneTextBox.UnderlinedStyle = true;
-            this.phoneTextBox._TextChanged += new System.EventHandler(this.customTextBox1__TextChanged_1);
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.nameTextBox.BorderColor = System.Drawing.Color.MediumPurple;
-            this.nameTextBox.BorderFocusColor = System.Drawing.Color.GreenYellow;
-            this.nameTextBox.BorderRadius = 16;
-            this.nameTextBox.BorderSize = 2;
-            this.nameTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.nameTextBox.Location = new System.Drawing.Point(73, 13);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.nameTextBox.Multiline = false;
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.nameTextBox.PasswordChar = false;
-            this.nameTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.nameTextBox.PlaceholderText = "Full Name";
-            this.nameTextBox.Size = new System.Drawing.Size(250, 36);
-            this.nameTextBox.TabIndex = 4;
-            this.nameTextBox.Texts = "";
-            this.nameTextBox.UnderlinedStyle = true;
-            this.nameTextBox._TextChanged += new System.EventHandler(this.customTextBox2__TextChanged);
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.emailTextBox.BorderColor = System.Drawing.Color.MediumPurple;
-            this.emailTextBox.BorderFocusColor = System.Drawing.Color.GreenYellow;
-            this.emailTextBox.BorderRadius = 16;
-            this.emailTextBox.BorderSize = 2;
-            this.emailTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox.ForeColor = System.Drawing.Color.Black;
-            this.emailTextBox.Location = new System.Drawing.Point(73, 173);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.emailTextBox.Multiline = false;
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.emailTextBox.PasswordChar = false;
-            this.emailTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.emailTextBox.PlaceholderText = "Email";
-            this.emailTextBox.Size = new System.Drawing.Size(250, 36);
-            this.emailTextBox.TabIndex = 6;
-            this.emailTextBox.Texts = "";
-            this.emailTextBox.UnderlinedStyle = true;
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.addressTextBox.BorderColor = System.Drawing.Color.MediumPurple;
-            this.addressTextBox.BorderFocusColor = System.Drawing.Color.GreenYellow;
-            this.addressTextBox.BorderRadius = 16;
-            this.addressTextBox.BorderSize = 2;
-            this.addressTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTextBox.ForeColor = System.Drawing.Color.Black;
-            this.addressTextBox.Location = new System.Drawing.Point(73, 66);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.addressTextBox.Multiline = false;
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.addressTextBox.PasswordChar = false;
-            this.addressTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.addressTextBox.PlaceholderText = "Address";
-            this.addressTextBox.Size = new System.Drawing.Size(250, 36);
-            this.addressTextBox.TabIndex = 7;
-            this.addressTextBox.Texts = "";
-            this.addressTextBox.UnderlinedStyle = true;
             // 
             // label3
             // 
@@ -177,40 +84,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 9;
             // 
-            // DOBTextBox
-            // 
-            this.DOBTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.DOBTextBox.BorderColor = System.Drawing.Color.MediumPurple;
-            this.DOBTextBox.BorderFocusColor = System.Drawing.Color.GreenYellow;
-            this.DOBTextBox.BorderRadius = 16;
-            this.DOBTextBox.BorderSize = 2;
-            this.DOBTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOBTextBox.ForeColor = System.Drawing.Color.Black;
-            this.DOBTextBox.Location = new System.Drawing.Point(73, 248);
-            this.DOBTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.DOBTextBox.Multiline = false;
-            this.DOBTextBox.Name = "DOBTextBox";
-            this.DOBTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.DOBTextBox.PasswordChar = false;
-            this.DOBTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.DOBTextBox.PlaceholderText = "Date Of Birth";
-            this.DOBTextBox.Size = new System.Drawing.Size(250, 36);
-            this.DOBTextBox.TabIndex = 8;
-            this.DOBTextBox.Texts = "";
-            this.DOBTextBox.UnderlinedStyle = true;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel3.Controls.Add(this.Guest);
+            this.panel3.Controls.Add(this.guestnum);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.dateTimePicker2);
             this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Controls.Add(this.nameTextBox);
-            this.panel3.Controls.Add(this.addressTextBox);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.phoneTextBox);
-            this.panel3.Controls.Add(this.emailTextBox);
-            this.panel3.Controls.Add(this.DOBTextBox);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -246,10 +128,11 @@
             this.iconButton1.Text = "Book Now!";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // roomType
             // 
-            this.roomType.Controls.Add(this.radioButton1);
+            this.roomType.Controls.Add(this.radiobtnPres);
             this.roomType.Controls.Add(this.radioBtnPentHouse);
             this.roomType.Controls.Add(this.radioBtnSuite);
             this.roomType.Controls.Add(this.radioBtnStudio);
@@ -264,24 +147,24 @@
             this.roomType.Text = "Check Out Our Rooms!";
             this.roomType.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // radioButton1
+            // radiobtnPres
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.Teal;
-            this.radioButton1.Image = ((System.Drawing.Image)(resources.GetObject("radioButton1.Image")));
-            this.radioButton1.Location = new System.Drawing.Point(3, 396);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(904, 121);
-            this.radioButton1.TabIndex = 23;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Three Bedroom Presidential Suite  \r\n3 King Beds\r\nMax Guests 6\r\n$5000.00 avg/night" +
+            this.radiobtnPres.AutoSize = true;
+            this.radiobtnPres.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radiobtnPres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radiobtnPres.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radiobtnPres.ForeColor = System.Drawing.Color.Teal;
+            this.radiobtnPres.Image = ((System.Drawing.Image)(resources.GetObject("radiobtnPres.Image")));
+            this.radiobtnPres.Location = new System.Drawing.Point(3, 396);
+            this.radiobtnPres.Name = "radiobtnPres";
+            this.radiobtnPres.Size = new System.Drawing.Size(904, 121);
+            this.radiobtnPres.TabIndex = 23;
+            this.radiobtnPres.TabStop = true;
+            this.radiobtnPres.Text = "Three Bedroom Presidential Suite  \r\n3 King Beds\r\nMax Guests 6\r\n$5000.00 avg/night" +
     "";
-            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radiobtnPres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radiobtnPres.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.radiobtnPres.UseVisualStyleBackColor = true;
             // 
             // radioBtnPentHouse
             // 
@@ -339,6 +222,35 @@
             this.radioBtnStudio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioBtnStudio.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.radioBtnStudio.UseVisualStyleBackColor = true;
+            this.radioBtnStudio.CheckedChanged += new System.EventHandler(this.radioBtnStudio_CheckedChanged);
+            // 
+            // guestnum
+            // 
+            this.guestnum.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guestnum.FormattingEnabled = true;
+            this.guestnum.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.guestnum.Location = new System.Drawing.Point(195, 200);
+            this.guestnum.Name = "guestnum";
+            this.guestnum.Size = new System.Drawing.Size(121, 23);
+            this.guestnum.TabIndex = 14;
+            this.guestnum.SelectedIndexChanged += new System.EventHandler(this.guestnum_SelectedIndexChanged);
+            // 
+            // Guest
+            // 
+            this.Guest.AutoSize = true;
+            this.Guest.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Guest.ForeColor = System.Drawing.Color.Teal;
+            this.Guest.Location = new System.Drawing.Point(40, 191);
+            this.Guest.Name = "Guest";
+            this.Guest.Size = new System.Drawing.Size(149, 34);
+            this.Guest.TabIndex = 15;
+            this.Guest.Text = "Total Guest:";
             // 
             // New_Reservation
             // 
@@ -351,6 +263,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "New_Reservation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New_Reservation";
             this.Load += new System.EventHandler(this.New_Reservation_Load);
             this.panel3.ResumeLayout(false);
@@ -363,11 +276,6 @@
         }
 
         #endregion
-        private CustomTextBox nameTextBox;
-        private CustomTextBox phoneTextBox;
-        private CustomTextBox emailTextBox;
-        private CustomTextBox addressTextBox;
-        private CustomTextBox DOBTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -379,6 +287,8 @@
         private System.Windows.Forms.RadioButton radioBtnStudio;
         private System.Windows.Forms.RadioButton radioBtnSuite;
         private System.Windows.Forms.RadioButton radioBtnPentHouse;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radiobtnPres;
+        private System.Windows.Forms.ComboBox guestnum;
+        private System.Windows.Forms.Label Guest;
     }
 }

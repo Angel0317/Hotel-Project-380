@@ -16,7 +16,7 @@ namespace Hotel_Project_380
     {
 
         private int borderSize = 2;
-
+        public static Form1 instance;
         //Constructor
         public Form1()
         {
