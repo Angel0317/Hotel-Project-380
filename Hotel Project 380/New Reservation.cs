@@ -12,18 +12,14 @@ namespace Hotel_Project_380
 {
     public partial class New_Reservation : Form
     {
-        public static New_Reservation instance;
-
-        SqlCommand cmd= new SqlCommand();
-        SqlConnection conn;
-        SqlDataAdapter adapter;
-        String RoomDet;
+        Image studio;
+        Image suite;
+        Image pent;
+        Image Pres;
         
-        public TextBox tb1;
         public New_Reservation()
         {
             InitializeComponent();
-            instance = this;
 
         }
 
@@ -59,7 +55,6 @@ namespace Hotel_Project_380
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            RoomDet = "Studio Deluxe Room \n 1 king Bed/ 2 Queen Beds\n Max Guests 4";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -113,22 +108,18 @@ namespace Hotel_Project_380
 
         private void radioBtnSuite_CheckedChanged(object sender, EventArgs e)
         {
-            RoomDet = "One Bedroom Panoramic View Suite\n 1 King Bed/ 2 Queen Beds\n Max Guests 4";
         }
 
         private void radioBtnPentHouse_CheckedChanged(object sender, EventArgs e)
         {
-            RoomDet = "Two Bedroom Penthouse Sky View  \n 2 King Beds\n Max Guests 4";
         }
 
         private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
         {
-            RoomDet = " Three Bedroom Presidential Suite  \n 3 King Beds\nMax Guests 6";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Cart.instance.lab1.Text = textBox3.Text;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -142,6 +133,79 @@ namespace Hotel_Project_380
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioBtnStudio_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Cart form = new Cart();
+           // int max = int.Parse(guestnum.SelectedItem.ToString());
+
+            if (guestnum.SelectedItem == null)
+            {
+                MessageBox.Show("Please choose the number of guests.");
+            }
+           else if (!radioBtnStudio.Checked && !radioBtnSuite.Checked && !radioBtnPentHouse.Checked && !radiobtnPres.Checked)
+           {
+                MessageBox.Show("Please choose a room.");
+           }
+
+            if (radioBtnStudio.Checked && guestnum.SelectedItem != null)
+            {
+                studio = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\studio5.jpg");
+                Cart.instance.lab1.Text = "Studio Deluxe Stay";
+                Cart.instance.lab2.Text = "One King or Two Queen";
+                Cart.instance.lab3.Text = dateTimePicker1.Value.ToString();
+                Cart.instance.lab4.Text = dateTimePicker2.Value.ToString();
+                Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
+                Cart.instance.pic.Image = studio;
+                form.Show();
+               
+            }
+            else if(radioBtnSuite.Checked && guestnum.SelectedItem != null)
+            {
+                suite = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\suitepic2.jpg");
+                Cart.instance.lab1.Text = "Panoramic Suite Stay";
+                Cart.instance.lab2.Text = "One Bedroom\nOne King or Two Queen";
+                Cart.instance.lab3.Text = dateTimePicker1.Value.ToString();
+                Cart.instance.lab4.Text = dateTimePicker2.Value.ToString();
+                Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
+                Cart.instance.pic.Image = suite;
+                form.Show();
+                
+               
+            }
+            else if(radioBtnPentHouse.Checked && guestnum.SelectedItem != null)
+            {
+                pent = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\pent.jpg");
+                Cart.instance.lab1.Text = "Penthouse Sky View Stay";
+                Cart.instance.lab2.Text = "Two King Beds\nTwo Master Bedrooms";
+                Cart.instance.lab3.Text = dateTimePicker1.Value.ToString();
+                Cart.instance.lab4.Text = dateTimePicker2.Value.ToString();
+                Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
+                Cart.instance.pic.Image = pent;
+                form.Show();
+            }
+            else if (radiobtnPres.Checked && guestnum.SelectedItem != null)
+            {
+                Pres = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\the palms4.jpg");
+                Cart.instance.lab1.Text = "Presidential Sky Villa";
+                Cart.instance.lab2.Text = "Three Master Bedrooms\nPool Table/Private Pool";
+                Cart.instance.lab3.Text = dateTimePicker1.Value.ToString();
+                Cart.instance.lab4.Text = dateTimePicker2.Value.ToString();
+                Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
+                Cart.instance.pic.Image = Pres;
+                form.Show();
+            }
+        }
+
+        private void guestnum_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
