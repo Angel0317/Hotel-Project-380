@@ -20,7 +20,6 @@ namespace Hotel_Project_380
         public New_Reservation()
         {
             InitializeComponent();
-            instance = this;
 
         }
 
@@ -56,7 +55,6 @@ namespace Hotel_Project_380
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            RoomDet = "Studio Deluxe Room \n 1 king Bed/ 2 Queen Beds\n Max Guests 4";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -110,22 +108,18 @@ namespace Hotel_Project_380
 
         private void radioBtnSuite_CheckedChanged(object sender, EventArgs e)
         {
-            RoomDet = "One Bedroom Panoramic View Suite\n 1 King Bed/ 2 Queen Beds\n Max Guests 4";
         }
 
         private void radioBtnPentHouse_CheckedChanged(object sender, EventArgs e)
         {
-            RoomDet = "Two Bedroom Penthouse Sky View  \n 2 King Beds\n Max Guests 4";
         }
 
         private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
         {
-            RoomDet = " Three Bedroom Presidential Suite  \n 3 King Beds\nMax Guests 6";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Cart.instance.lab1.Text = textBox3.Text;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
