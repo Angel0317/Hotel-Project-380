@@ -30,7 +30,7 @@ namespace Hotel_Project_380
             SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
             var ds = new DataSet();
             da.Fill(ds);
-            reservationCheckBoxEdit.DataSource = ds.Tables[0];
+            ReservationDisplay.DataSource = ds.Tables[0];
             if(ds.Tables[0].Rows.Count > 0)
             {
                 MessageBox.Show("Banananas");
@@ -73,7 +73,7 @@ namespace Hotel_Project_380
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
-                MessageBox.Show("Reservation Found!");
+               // MessageBox.Show("Reservation Found!");
 
                 /*
                  * if a reservation is found, the data from table will now be displayed on the checkbox 
@@ -84,10 +84,10 @@ namespace Hotel_Project_380
                 SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
                 var ds = new DataSet();
                 da.Fill(ds);
-                reservationCheckBoxEdit.DataSource = ds.Tables[0];
-                if (ds.Tables[0].Rows.Count > 0)
+                ReservationDisplay.DataSource = ds.Tables[0];
+                if (ds.Tables[0].Rows.Count == 0)
                 {
-                    MessageBox.Show("Table found, Sending data to checkbox");
+                    //MessageBox.Show("Table found, Sending data to checkbox");
                 }
             }
             else
@@ -111,12 +111,14 @@ namespace Hotel_Project_380
              * Selected reservation from CheckedListBox1 will be deleted from database
              * I.E. cancelling the reservation
              */
-            Con.Open();
-            String query = "delete from GuestInfo_Table where ReservationId =" + reservationidtb.Text + "";
-            SqlCommand cmd = new SqlCommand(query, Con); 
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Reservation Deleted");
-            Con.Close();
+             Con.Open();
+             String query = "delete from GuestInfo_Table where ReservationId =" + reservationidtb.Text + "";
+             SqlCommand cmd = new SqlCommand(query, Con);
+             cmd.ExecuteNonQuery();
+             MessageBox.Show("Reservation Deleted");
+             Con.Close();
+            
+
            
         }
 
@@ -141,6 +143,18 @@ namespace Hotel_Project_380
             /*
              * First name on reservation
              */
+        }
+
+        private void reservationCheckBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*
+             * Reservation will populate the box from the resulting search,
+             * the guest will have the option to delete the reservation
+             */
+            //Reservationtb.Text = ReservationDisplay.SelectedRows[0].Cells[0].Value.ToString();
+            //firstnametb.Text = ReservationDisplay.SelectedRows[0].Cells[1].Value.ToString();
+            //lastnametb.Text = ReservationDisplay.SelectedRows[0].Cells[2].Value.ToString();
+
         }
     }
 }
