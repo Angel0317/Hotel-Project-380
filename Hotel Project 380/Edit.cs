@@ -17,7 +17,7 @@ namespace Hotel_Project_380
          * Connect Sql Server data for all relevant reservation information
          */
 
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Documents\Hoteldb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Documents\GitHub\Hotel-Project-380\HotelDB.mdf;Integrated Security=True;Connect Timeout=30");
         public void populate()
         {
             /*
@@ -25,7 +25,7 @@ namespace Hotel_Project_380
              */
 
             Con.Open();
-            string Myquery = "select * from Reservation_Table";
+            string Myquery = "select * from GuestInfo_Table";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -67,7 +67,7 @@ namespace Hotel_Project_380
              * in checkbox form on the right
              */
             Con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Reservation_Table where ReservationId = '"+reservationidtb.Text+"' " +
+            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from GuestInfo_Table where ReservationId = '"+reservationidtb.Text+"' " +
                 "and firstName = '"+firstnametb.Text+"' and lastName = '"+lastnametb.Text+"' ",Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -79,7 +79,7 @@ namespace Hotel_Project_380
                  * if a reservation is found, the data from table will now be displayed on the checkbox 
                  * on the right of the form
                  */
-                string Myquery = "select * from Reservation_Table";
+                string Myquery = "select * from GuestInfo_Table";
                 SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
                 SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
                 var ds = new DataSet();
@@ -111,6 +111,13 @@ namespace Hotel_Project_380
              * Selected reservation from CheckedListBox1 will be deleted from database
              * I.E. cancelling the reservation
              */
+            Con.Open();
+            String query = "delete from GuestInfo_Table where ReservationId =" + reservationidtb.Text + "";
+            SqlCommand cmd = new SqlCommand(query, Con); 
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Reservation Deleted");
+            Con.Close();
+           
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
