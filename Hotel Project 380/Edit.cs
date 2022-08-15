@@ -73,22 +73,18 @@ namespace Hotel_Project_380
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
-               // MessageBox.Show("Reservation Found!");
+                // MessageBox.Show("Reservation Found!");
 
                 /*
                  * if a reservation is found, the data from table will now be displayed on the checkbox 
                  * on the right of the form
                  */
-                string Myquery = "select * from GuestInfo_Table";
+                string Myquery = "select * from GuestInfo_Table where ReservationId = '"+reservationidtb.Text+"'";
                 SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
                 SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
                 var ds = new DataSet();
                 da.Fill(ds);
                 ReservationDisplay.DataSource = ds.Tables[0];
-                if (ds.Tables[0].Rows.Count == 0)
-                {
-                    //MessageBox.Show("Table found, Sending data to checkbox");
-                }
             }
             else
             {
@@ -154,6 +150,11 @@ namespace Hotel_Project_380
             //Reservationtb.Text = ReservationDisplay.SelectedRows[0].Cells[0].Value.ToString();
             //firstnametb.Text = ReservationDisplay.SelectedRows[0].Cells[1].Value.ToString();
             //lastnametb.Text = ReservationDisplay.SelectedRows[0].Cells[2].Value.ToString();
+
+        }
+
+        private void ReservationDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

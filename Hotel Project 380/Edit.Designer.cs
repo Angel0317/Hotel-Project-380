@@ -172,6 +172,7 @@
             this.ReservationDisplay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ReservationDisplay.Size = new System.Drawing.Size(836, 288);
             this.ReservationDisplay.TabIndex = 16;
+            this.ReservationDisplay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationDisplay_CellContentClick);
             // 
             // Edit
             // 
