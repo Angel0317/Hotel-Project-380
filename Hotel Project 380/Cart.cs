@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Net;
 
 namespace Hotel_Project_380
 {
@@ -62,6 +64,7 @@ namespace Hotel_Project_380
 
         private void checkOut_Click(object sender, EventArgs e)
         {
+
             if (firstName.Text == "" || lastName.Text == "" || addresstxt.Text == "" || phonetxt.Text == "" || emailtxt.Text == "" || zipcodetxt.Text == "" || statetxt.Text == "")
             {
                 MessageBox.Show("Please fill information text.");
@@ -80,12 +83,33 @@ namespace Hotel_Project_380
                 cart.Close();
                 this.Close();
             }
+            //Sending Email Functoin
+            try
+            {
+                using (MailMessage mail = new MailMessage())
+                {
+                    mail.From = new MailAddress("BlissHotel01@gmail.com");
+                    mail.To.Add(emailtxt.Text);
+                    mail.Subject = "Test Sending Mail";
+                    mail.Body = "<h1> This is Body</h1>";
+                    mail.IsBodyHtml = true;
 
-        
-        }
+                    using (SmtpClient smtp = new SmtpClient("smpt.gamil.com", 587))
+                    {
+                        smtp.Credentials = new System.Net.NetworkCredential("BlissHotel01@gmail.com", "BSG12345678");
+                        smtp.EnableSsl = true;
+                        smtp.Send(mail);
 
-        private void Cart_Load(object sender, EventArgs e)
-        {
+                        label1.Text = "Mail Sent";
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                 label1.Text = ex.Message;
+
+            }
 
         }
 

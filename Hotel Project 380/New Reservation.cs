@@ -158,7 +158,7 @@ namespace Hotel_Project_380
 
             if (radioBtnStudio.Checked && guestnum.SelectedItem != null)
             {
-                studio = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\studio5.jpg");
+               // studio = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\studio5.jpg");
                 Cart.instance.lab1.Text = "Studio Deluxe Stay";
                 Cart.instance.lab2.Text = "One King or Two Queen";
                 Cart.instance.lab3.Text = dateTimePicker1.Value.ToString();

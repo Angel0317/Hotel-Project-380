@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -567,7 +568,10 @@
             this.Name = "Cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
-            this.Load += new System.EventHandler(this.Cart_Load);
+           
+            //cart load not found
+            
+            //this.Load += new System.EventHandler(this.Cart_Load);
             this.Summary.ResumeLayout(false);
             this.Summary.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
