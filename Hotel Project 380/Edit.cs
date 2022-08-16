@@ -18,7 +18,7 @@ namespace Hotel_Project_380
          */
 
         //Change SQL connection to HotelDB.mdf
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Documents\GitHub\Hotel-Project-380\HotelDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Downloads\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
         public void populate()
         {
             /*
@@ -26,7 +26,7 @@ namespace Hotel_Project_380
              */
 
             Con.Open();
-            string Myquery = "select * from GuestInfo_Table";
+            string Myquery = "select * from Cart_Table";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -68,8 +68,7 @@ namespace Hotel_Project_380
              * in checkbox form on the right
              */
             Con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from GuestInfo_Table where ReservationId = '"+reservationidtb.Text+"' " +
-                "and firstName = '"+firstnametb.Text+"' and lastName = '"+lastnametb.Text+"' ",Con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Cart_Table where ReservationID = '"+reservationidtb.Text+"' and FirstName = '"+firstnametb.Text+"' and LastName = '"+lastnametb.Text+"' ",Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
@@ -80,7 +79,7 @@ namespace Hotel_Project_380
                  * if a reservation is found, the data from table will now be displayed on the checkbox 
                  * on the right of the form
                  */
-                string Myquery = "select * from GuestInfo_Table where ReservationId = '"+reservationidtb.Text+"'";
+                string Myquery = "select * from Cart_Table where ReservationID = '"+reservationidtb.Text+"'";
                 SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
                 SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
                 var ds = new DataSet();
@@ -109,7 +108,7 @@ namespace Hotel_Project_380
              * I.E. cancelling the reservation
              */
              Con.Open();
-             String query = "delete from GuestInfo_Table where ReservationId =" + reservationidtb.Text + "";
+             String query = "delete from Cart_Table where ReservationID =" + reservationidtb.Text + "";
              SqlCommand cmd = new SqlCommand(query, Con);
              cmd.ExecuteNonQuery();
              MessageBox.Show("Reservation Deleted");
