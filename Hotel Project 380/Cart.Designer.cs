@@ -39,8 +39,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.checkOut = new System.Windows.Forms.Button();
             this.Summary = new System.Windows.Forms.GroupBox();
+            this.Total = new System.Windows.Forms.Label();
+            this.leavedate = new System.Windows.Forms.Label();
+            this.startdate = new System.Windows.Forms.Label();
+            this.Details = new System.Windows.Forms.Label();
             this.room = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.Pricetxt = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.endDate = new System.Windows.Forms.Label();
@@ -60,10 +64,9 @@
             this.cvvtxt = new System.Windows.Forms.TextBox();
             this.billingtxt = new System.Windows.Forms.TextBox();
             this.expirationtxt = new System.Windows.Forms.TextBox();
-            this.Details = new System.Windows.Forms.Label();
-            this.startdate = new System.Windows.Forms.Label();
-            this.leavedate = new System.Windows.Forms.Label();
-            this.Total = new System.Windows.Forms.Label();
+            this.totalNighttxt = new System.Windows.Forms.Label();
+            this.numberofnights = new System.Windows.Forms.Label();
+            this.Totalprice = new System.Windows.Forms.Label();
             this.Summary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,10 +78,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(50, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 24);
+            this.label1.Size = new System.Drawing.Size(116, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,7 +136,6 @@
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(164, 25);
             this.lastName.TabIndex = 7;
-
             // 
             // label4
             // 
@@ -142,7 +145,6 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.label4.Location = new System.Drawing.Point(50, 224);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 24);
@@ -210,13 +212,16 @@
             // 
             // Summary
             // 
-            this.Summary.BackColor = System.Drawing.Color.LightGray;
+            this.Summary.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Summary.Controls.Add(this.Totalprice);
+            this.Summary.Controls.Add(this.numberofnights);
+            this.Summary.Controls.Add(this.totalNighttxt);
             this.Summary.Controls.Add(this.Total);
             this.Summary.Controls.Add(this.leavedate);
             this.Summary.Controls.Add(this.startdate);
             this.Summary.Controls.Add(this.Details);
             this.Summary.Controls.Add(this.room);
-            this.Summary.Controls.Add(this.label14);
+            this.Summary.Controls.Add(this.Pricetxt);
             this.Summary.Controls.Add(this.checkOut);
             this.Summary.Controls.Add(this.label13);
             this.Summary.Controls.Add(this.pictureBox1);
@@ -235,7 +240,46 @@
             this.Summary.TabStop = false;
             this.Summary.Text = "Summary";
             // 
-
+            // Total
+            // 
+            this.Total.AutoSize = true;
+            this.Total.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total.Location = new System.Drawing.Point(132, 272);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(38, 17);
+            this.Total.TabIndex = 40;
+            this.Total.Text = "null";
+            // 
+            // leavedate
+            // 
+            this.leavedate.AutoSize = true;
+            this.leavedate.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leavedate.Location = new System.Drawing.Point(88, 243);
+            this.leavedate.Name = "leavedate";
+            this.leavedate.Size = new System.Drawing.Size(38, 17);
+            this.leavedate.TabIndex = 39;
+            this.leavedate.Text = "null";
+            // 
+            // startdate
+            // 
+            this.startdate.AutoSize = true;
+            this.startdate.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startdate.Location = new System.Drawing.Point(84, 213);
+            this.startdate.Name = "startdate";
+            this.startdate.Size = new System.Drawing.Size(38, 17);
+            this.startdate.TabIndex = 38;
+            this.startdate.Text = "null";
+            // 
+            // Details
+            // 
+            this.Details.AutoSize = true;
+            this.Details.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Details.Location = new System.Drawing.Point(117, 166);
+            this.Details.Name = "Details";
+            this.Details.Size = new System.Drawing.Size(38, 17);
+            this.Details.TabIndex = 37;
+            this.Details.Text = "null";
+            // 
             // room
             // 
             this.room.AutoSize = true;
@@ -247,21 +291,22 @@
             this.room.Text = "null";
             this.room.Click += new System.EventHandler(this.label16_Click);
             // 
-            // label14
+            // Pricetxt
             // 
-            this.label14.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Pricetxt.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.Pricetxt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(11, 338);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(106, 17);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Total for Stay";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Pricetxt.AutoSize = true;
+            this.Pricetxt.BackColor = System.Drawing.Color.Transparent;
+            this.Pricetxt.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pricetxt.Location = new System.Drawing.Point(16, 365);
+            this.Pricetxt.Name = "Pricetxt";
+            this.Pricetxt.Size = new System.Drawing.Size(124, 17);
+            this.Pricetxt.TabIndex = 35;
+            this.Pricetxt.Text = "Total for Stay: $";
+            this.Pricetxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Pricetxt.Click += new System.EventHandler(this.label14_Click);
             // 
             // label13
             // 
@@ -352,7 +397,8 @@
             this.checkIn.Tag = "startDate";
             this.checkIn.Text = "Check In:";
             this.checkIn.Click += new System.EventHandler(this.checkIn_Click);
-            // label3
+            // 
+            // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -494,45 +540,42 @@
             this.expirationtxt.Size = new System.Drawing.Size(164, 25);
             this.expirationtxt.TabIndex = 43;
             // 
-            // Details
+            // totalNighttxt
             // 
-            this.Details.AutoSize = true;
-            this.Details.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Details.Location = new System.Drawing.Point(117, 166);
-            this.Details.Name = "Details";
-            this.Details.Size = new System.Drawing.Size(38, 17);
-            this.Details.TabIndex = 37;
-            this.Details.Text = "null";
+            this.totalNighttxt.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.totalNighttxt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalNighttxt.AutoSize = true;
+            this.totalNighttxt.BackColor = System.Drawing.Color.Transparent;
+            this.totalNighttxt.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalNighttxt.Location = new System.Drawing.Point(14, 303);
+            this.totalNighttxt.Name = "totalNighttxt";
+            this.totalNighttxt.Size = new System.Drawing.Size(114, 17);
+            this.totalNighttxt.TabIndex = 41;
+            this.totalNighttxt.Text = "Total Night(s):";
+            this.totalNighttxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // startdate
+            // numberofnights
             // 
-            this.startdate.AutoSize = true;
-            this.startdate.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startdate.Location = new System.Drawing.Point(84, 213);
-            this.startdate.Name = "startdate";
-            this.startdate.Size = new System.Drawing.Size(38, 17);
-            this.startdate.TabIndex = 38;
-            this.startdate.Text = "null";
+            this.numberofnights.AutoSize = true;
+            this.numberofnights.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberofnights.Location = new System.Drawing.Point(134, 303);
+            this.numberofnights.Name = "numberofnights";
+            this.numberofnights.Size = new System.Drawing.Size(38, 17);
+            this.numberofnights.TabIndex = 42;
+            this.numberofnights.Text = "null";
             // 
-            // leavedate
+            // Totalprice
             // 
-            this.leavedate.AutoSize = true;
-            this.leavedate.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leavedate.Location = new System.Drawing.Point(88, 243);
-            this.leavedate.Name = "leavedate";
-            this.leavedate.Size = new System.Drawing.Size(38, 17);
-            this.leavedate.TabIndex = 39;
-            this.leavedate.Text = "null";
-            // 
-            // Total
-            // 
-            this.Total.AutoSize = true;
-            this.Total.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(132, 272);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(38, 17);
-            this.Total.TabIndex = 40;
-            this.Total.Text = "null";
+            this.Totalprice.AutoSize = true;
+            this.Totalprice.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Totalprice.Location = new System.Drawing.Point(134, 365);
+            this.Totalprice.Name = "Totalprice";
+            this.Totalprice.Size = new System.Drawing.Size(38, 17);
+            this.Totalprice.TabIndex = 43;
+            this.Totalprice.Text = "null";
+            this.Totalprice.Click += new System.EventHandler(this.Totalprice_Click);
             // 
             // Cart
             // 
@@ -563,7 +606,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
@@ -590,7 +633,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button checkOut;
         private System.Windows.Forms.GroupBox Summary;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label Pricetxt;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label endDate;
@@ -615,5 +658,8 @@
         private System.Windows.Forms.Label startdate;
         private System.Windows.Forms.Label leavedate;
         private System.Windows.Forms.Label Total;
+        private System.Windows.Forms.Label totalNighttxt;
+        private System.Windows.Forms.Label numberofnights;
+        private System.Windows.Forms.Label Totalprice;
     }
 }

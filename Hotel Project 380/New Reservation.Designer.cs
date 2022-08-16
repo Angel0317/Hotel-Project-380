@@ -31,9 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_Reservation));
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Checkout_calender = new System.Windows.Forms.DateTimePicker();
+            this.CheckIn_calender = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Guest = new System.Windows.Forms.Label();
+            this.guestnum = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.roomType = new System.Windows.Forms.GroupBox();
@@ -41,8 +43,6 @@
             this.radioBtnPentHouse = new System.Windows.Forms.RadioButton();
             this.radioBtnSuite = new System.Windows.Forms.RadioButton();
             this.radioBtnStudio = new System.Windows.Forms.RadioButton();
-            this.guestnum = new System.Windows.Forms.ComboBox();
-            this.Guest = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.roomType.SuspendLayout();
@@ -70,19 +70,22 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Check In Date:";
             // 
-            // dateTimePicker2
+            // Checkout_calender
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(247, 418);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 10;
+            this.Checkout_calender.Location = new System.Drawing.Point(247, 418);
+            this.Checkout_calender.MinDate = new System.DateTime(2022, 8, 1, 0, 0, 0, 0);
+            this.Checkout_calender.Name = "Checkout_calender";
+            this.Checkout_calender.Size = new System.Drawing.Size(200, 20);
+            this.Checkout_calender.TabIndex = 10;
             // 
-            // dateTimePicker1
+            // CheckIn_calender
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(231, 330);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 9;
+            this.CheckIn_calender.Location = new System.Drawing.Point(231, 330);
+            this.CheckIn_calender.MinDate = new System.DateTime(2022, 8, 1, 0, 0, 0, 0);
+            this.CheckIn_calender.Name = "CheckIn_calender";
+            this.CheckIn_calender.Size = new System.Drawing.Size(200, 20);
+            this.CheckIn_calender.TabIndex = 9;
+            this.CheckIn_calender.Value = new System.DateTime(2022, 8, 15, 16, 48, 49, 0);
             // 
             // panel3
             // 
@@ -90,8 +93,8 @@
             this.panel3.Controls.Add(this.Guest);
             this.panel3.Controls.Add(this.guestnum);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.dateTimePicker2);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.Checkout_calender);
+            this.panel3.Controls.Add(this.CheckIn_calender);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -99,6 +102,34 @@
             this.panel3.Size = new System.Drawing.Size(478, 690);
             this.panel3.TabIndex = 16;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // Guest
+            // 
+            this.Guest.AutoSize = true;
+            this.Guest.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Guest.ForeColor = System.Drawing.Color.Teal;
+            this.Guest.Location = new System.Drawing.Point(40, 191);
+            this.Guest.Name = "Guest";
+            this.Guest.Size = new System.Drawing.Size(149, 34);
+            this.Guest.TabIndex = 15;
+            this.Guest.Text = "Total Guest:";
+            // 
+            // guestnum
+            // 
+            this.guestnum.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guestnum.FormattingEnabled = true;
+            this.guestnum.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.guestnum.Location = new System.Drawing.Point(195, 200);
+            this.guestnum.Name = "guestnum";
+            this.guestnum.Size = new System.Drawing.Size(121, 23);
+            this.guestnum.TabIndex = 14;
+            this.guestnum.SelectedIndexChanged += new System.EventHandler(this.guestnum_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -224,34 +255,6 @@
             this.radioBtnStudio.UseVisualStyleBackColor = true;
             this.radioBtnStudio.CheckedChanged += new System.EventHandler(this.radioBtnStudio_CheckedChanged);
             // 
-            // guestnum
-            // 
-            this.guestnum.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guestnum.FormattingEnabled = true;
-            this.guestnum.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.guestnum.Location = new System.Drawing.Point(195, 200);
-            this.guestnum.Name = "guestnum";
-            this.guestnum.Size = new System.Drawing.Size(121, 23);
-            this.guestnum.TabIndex = 14;
-            this.guestnum.SelectedIndexChanged += new System.EventHandler(this.guestnum_SelectedIndexChanged);
-            // 
-            // Guest
-            // 
-            this.Guest.AutoSize = true;
-            this.Guest.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guest.ForeColor = System.Drawing.Color.Teal;
-            this.Guest.Location = new System.Drawing.Point(40, 191);
-            this.Guest.Name = "Guest";
-            this.Guest.Size = new System.Drawing.Size(149, 34);
-            this.Guest.TabIndex = 15;
-            this.Guest.Text = "Total Guest:";
-            // 
             // New_Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,8 +280,8 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Checkout_calender;
+        private System.Windows.Forms.DateTimePicker CheckIn_calender;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;

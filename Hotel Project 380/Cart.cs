@@ -22,6 +22,8 @@ namespace Hotel_Project_380
         public Label lab3;
         public Label lab4;
         public Label lab5;
+        public Label lab6;
+        public Label lab7; 
         public PictureBox pic;
         public Cart()
         {
@@ -32,6 +34,8 @@ namespace Hotel_Project_380
             lab3 = startdate;
             lab4 = leavedate;
             lab5 = Total;
+            lab6 = numberofnights;
+            lab7 = Totalprice;
             pic = pictureBox1;
         }
 
@@ -74,7 +78,7 @@ namespace Hotel_Project_380
             {
                 cart.Open();
                 SqlCommand cmd = new SqlCommand("insert into Cart_Table values ('" + firstName.Text + "','" + lastName.Text + "', '" + addresstxt.Text + "', '" + phonetxt.Text + "', '" + emailtxt.Text + "','" +
-                    zipcodetxt.Text + "', '" + statetxt.Text + "')", cart);
+                    zipcodetxt.Text + "', '" + statetxt.Text + "', '"+ startdate.Text + "','" + leavedate.Text + "', '" + Total.Text + "',  '" + numberofnights.Text + "')", cart);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Reservation Confirmed! :D");
                 cart.Close();
@@ -100,6 +104,16 @@ namespace Hotel_Project_380
         }
 
         private void checkIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Totalprice_Click(object sender, EventArgs e)
         {
 
         }
