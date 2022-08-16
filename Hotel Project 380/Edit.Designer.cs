@@ -35,11 +35,12 @@
             this.lastnametb = new System.Windows.Forms.TextBox();
             this.firstnametb = new System.Windows.Forms.TextBox();
             this.Reservationtb = new System.Windows.Forms.Button();
-            this.reservationCheckBoxEdit = new System.Windows.Forms.CheckedListBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.cancelReservationtb = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.checkintb = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ReservationDisplay = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ReservationDisplay)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,11 +50,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(30, 145);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 35);
+            this.label1.Size = new System.Drawing.Size(234, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reservation ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -72,11 +73,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(80, 205);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 35);
+            this.label2.Size = new System.Drawing.Size(185, 40);
             this.label2.TabIndex = 2;
             this.label2.Text = "First Name:";
             // 
@@ -86,11 +87,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(82, 265);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 35);
+            this.label3.Size = new System.Drawing.Size(176, 40);
             this.label3.TabIndex = 3;
             this.label3.Text = "Last Name:";
             // 
@@ -112,6 +113,7 @@
             // 
             // Reservationtb
             // 
+            this.Reservationtb.Font = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reservationtb.Location = new System.Drawing.Point(272, 402);
             this.Reservationtb.Name = "Reservationtb";
             this.Reservationtb.Size = new System.Drawing.Size(134, 40);
@@ -120,24 +122,16 @@
             this.Reservationtb.UseVisualStyleBackColor = true;
             this.Reservationtb.Click += new System.EventHandler(this.button1_Click);
             // 
-            // reservationCheckBoxEdit
+            // cancelReservationtb
             // 
-            this.reservationCheckBoxEdit.Location = new System.Drawing.Point(614, 174);
-            this.reservationCheckBoxEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.reservationCheckBoxEdit.Name = "reservationCheckBoxEdit";
-            this.reservationCheckBoxEdit.Size = new System.Drawing.Size(566, 441);
-            this.reservationCheckBoxEdit.TabIndex = 11;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Forte", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(614, 95);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(256, 45);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Cancel Reservation";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.cancelReservationtb.Font = new System.Drawing.Font("Harlow Solid Italic", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelReservationtb.Location = new System.Drawing.Point(614, 95);
+            this.cancelReservationtb.Name = "cancelReservationtb";
+            this.cancelReservationtb.Size = new System.Drawing.Size(256, 45);
+            this.cancelReservationtb.TabIndex = 9;
+            this.cancelReservationtb.Text = "Cancel Reservation";
+            this.cancelReservationtb.UseVisualStyleBackColor = true;
+            this.cancelReservationtb.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -145,11 +139,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(38, 325);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(220, 35);
+            this.label4.Size = new System.Drawing.Size(216, 40);
             this.label4.TabIndex = 10;
             this.label4.Text = "Check In Date:";
             // 
@@ -167,16 +161,30 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(272, 26);
             this.dateTimePicker1.TabIndex = 15;
             // 
+            // ReservationDisplay
+            // 
+            this.ReservationDisplay.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ReservationDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReservationDisplay.GridColor = System.Drawing.Color.White;
+            this.ReservationDisplay.Location = new System.Drawing.Point(614, 154);
+            this.ReservationDisplay.Name = "ReservationDisplay";
+            this.ReservationDisplay.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.ReservationDisplay.RowTemplate.Height = 28;
+            this.ReservationDisplay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ReservationDisplay.Size = new System.Drawing.Size(836, 288);
+            this.ReservationDisplay.TabIndex = 16;
+            this.ReservationDisplay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationDisplay_CellContentClick);
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2050, 983);
+            this.ClientSize = new System.Drawing.Size(1946, 983);
+            this.Controls.Add(this.ReservationDisplay);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.reservationCheckBoxEdit);
+            this.Controls.Add(this.cancelReservationtb);
             this.Controls.Add(this.Reservationtb);
             this.Controls.Add(this.firstnametb);
             this.Controls.Add(this.lastnametb);
@@ -189,6 +197,7 @@
             this.Name = "Edit";
             this.Text = "Edit";
             this.Load += new System.EventHandler(this.Edit_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ReservationDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,10 +212,10 @@
         private System.Windows.Forms.TextBox lastnametb;
         private System.Windows.Forms.TextBox firstnametb;
         private System.Windows.Forms.Button Reservationtb;
-        private System.Windows.Forms.CheckedListBox reservationCheckBoxEdit;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button cancelReservationtb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker checkintb;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView ReservationDisplay;
     }
 }

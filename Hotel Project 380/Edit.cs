@@ -17,7 +17,8 @@ namespace Hotel_Project_380
          * Connect Sql Server data for all relevant reservation information
          */
 
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Documents\Hoteldb.mdf;Integrated Security=True;Connect Timeout=30");
+        //Change SQL connection to HotelDB.mdf
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Documents\GitHub\Hotel-Project-380\HotelDB.mdf;Integrated Security=True;Connect Timeout=30");
         public void populate()
         {
             /*
@@ -25,12 +26,12 @@ namespace Hotel_Project_380
              */
 
             Con.Open();
-            string Myquery = "select * from Reservation_Table";
+            string Myquery = "select * from GuestInfo_Table";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
             var ds = new DataSet();
             da.Fill(ds);
-            reservationCheckBoxEdit.DataSource = ds.Tables[0];
+            ReservationDisplay.DataSource = ds.Tables[0];
             if(ds.Tables[0].Rows.Count > 0)
             {
                 MessageBox.Show("Banananas");
@@ -67,28 +68,24 @@ namespace Hotel_Project_380
              * in checkbox form on the right
              */
             Con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Reservation_Table where ReservationId = '"+reservationidtb.Text+"' " +
+            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from GuestInfo_Table where ReservationId = '"+reservationidtb.Text+"' " +
                 "and firstName = '"+firstnametb.Text+"' and lastName = '"+lastnametb.Text+"' ",Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
-                MessageBox.Show("Reservation Found!");
+                // MessageBox.Show("Reservation Found!");
 
                 /*
                  * if a reservation is found, the data from table will now be displayed on the checkbox 
                  * on the right of the form
                  */
-                string Myquery = "select * from Reservation_Table";
+                string Myquery = "select * from GuestInfo_Table where ReservationId = '"+reservationidtb.Text+"'";
                 SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
                 SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
                 var ds = new DataSet();
                 da.Fill(ds);
-                reservationCheckBoxEdit.DataSource = ds.Tables[0];
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    MessageBox.Show("Table found, Sending data to checkbox");
-                }
+                ReservationDisplay.DataSource = ds.Tables[0];
             }
             else
             {
@@ -111,6 +108,15 @@ namespace Hotel_Project_380
              * Selected reservation from CheckedListBox1 will be deleted from database
              * I.E. cancelling the reservation
              */
+             Con.Open();
+             String query = "delete from GuestInfo_Table where ReservationId =" + reservationidtb.Text + "";
+             SqlCommand cmd = new SqlCommand(query, Con);
+             cmd.ExecuteNonQuery();
+             MessageBox.Show("Reservation Deleted");
+             Con.Close();
+            
+
+           
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -133,6 +139,13 @@ namespace Hotel_Project_380
         {
             /*
              * First name on reservation
+             */
+        }
+
+        private void ReservationDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*
+             * Searched reservation will be displayed here from the guestinfopage
              */
         }
     }
