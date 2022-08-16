@@ -50,11 +50,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(30, 145);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 35);
+            this.label1.Size = new System.Drawing.Size(234, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reservation ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -73,11 +73,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(80, 205);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 35);
+            this.label2.Size = new System.Drawing.Size(185, 40);
             this.label2.TabIndex = 2;
             this.label2.Text = "First Name:";
             // 
@@ -87,11 +87,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(82, 265);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 35);
+            this.label3.Size = new System.Drawing.Size(176, 40);
             this.label3.TabIndex = 3;
             this.label3.Text = "Last Name:";
             // 
@@ -113,6 +113,7 @@
             // 
             // Reservationtb
             // 
+            this.Reservationtb.Font = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reservationtb.Location = new System.Drawing.Point(272, 402);
             this.Reservationtb.Name = "Reservationtb";
             this.Reservationtb.Size = new System.Drawing.Size(134, 40);
@@ -123,7 +124,7 @@
             // 
             // cancelReservationtb
             // 
-            this.cancelReservationtb.Font = new System.Drawing.Font("Forte", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelReservationtb.Font = new System.Drawing.Font("Harlow Solid Italic", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelReservationtb.Location = new System.Drawing.Point(614, 95);
             this.cancelReservationtb.Name = "cancelReservationtb";
             this.cancelReservationtb.Size = new System.Drawing.Size(256, 45);
@@ -138,11 +139,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Forte", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(38, 325);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(220, 35);
+            this.label4.Size = new System.Drawing.Size(216, 40);
             this.label4.TabIndex = 10;
             this.label4.Text = "Check In Date:";
             // 

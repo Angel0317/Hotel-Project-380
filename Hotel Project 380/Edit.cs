@@ -141,21 +141,11 @@ namespace Hotel_Project_380
              */
         }
 
-        private void reservationCheckBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            /*
-             * Reservation will populate the box from the resulting search,
-             * the guest will have the option to delete the reservation
-             */
-            //Reservationtb.Text = ReservationDisplay.SelectedRows[0].Cells[0].Value.ToString();
-            //firstnametb.Text = ReservationDisplay.SelectedRows[0].Cells[1].Value.ToString();
-            //lastnametb.Text = ReservationDisplay.SelectedRows[0].Cells[2].Value.ToString();
-
-        }
-
         private void ReservationDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            /*
+             * Searched reservation will be displayed here from the guestinfopage
+             */
         }
     }
 }
