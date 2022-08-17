@@ -135,6 +135,17 @@ namespace Hotel_Project_380
             CollapseMenu();
         }
 
+
+
+        /// <summary>
+        /// Home Page
+        /// Angel Reyes
+        /// 08/16/2022
+        /// 
+        /// The Collapse Menu Function creates a panel that slides in and out to be switching from form to form.
+        /// We chose this structure to move around forms and save data easier.
+        /// 
+        /// </summary>
         private void CollapseMenu()
         {
             if (this.panelMenu.Width > 200)
@@ -164,7 +175,18 @@ namespace Hotel_Project_380
         }
 
 
-
+        /// <summary>
+        /// Home Page
+        /// Angel Reyes
+        /// 08/16/2022
+        /// 
+        /// LoadForm this method creates a new form for each tab we have on our home page for example Make Reservation, Edit/Cancel, Login, and Home page
+        /// This is an important function to switch between forms in one main form each form has input/ouput values that are shared across one another.
+        /// The algorithm used here is poly morphism where we have a main form and creates a new smaller version of a form within the main form.
+        /// We chose this algorithm because new forms are instantly accessible on one Main form instead of closing the current form and opening a new form.
+        /// 
+        /// </summary>
+        /// <param name="Form"></param>
         public void loadform(object Form)
         {
             if (this.panelDesktop.Controls.Count > 0)

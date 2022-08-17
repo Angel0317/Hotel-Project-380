@@ -37,7 +37,7 @@
             this.Guest = new System.Windows.Forms.Label();
             this.guestnum = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.bookNow = new FontAwesome.Sharp.IconButton();
             this.roomType = new System.Windows.Forms.GroupBox();
             this.radiobtnPres = new System.Windows.Forms.RadioButton();
             this.radioBtnPentHouse = new System.Windows.Forms.RadioButton();
@@ -134,32 +134,32 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.bookNow);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(478, 600);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(910, 90);
             this.panel1.TabIndex = 17;
             // 
-            // iconButton1
+            // bookNow
             // 
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Harlow Solid Italic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(716, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(194, 90);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "Book Now!";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.bookNow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bookNow.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bookNow.FlatAppearance.BorderSize = 0;
+            this.bookNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bookNow.Font = new System.Drawing.Font("Harlow Solid Italic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bookNow.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
+            this.bookNow.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bookNow.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.bookNow.Location = new System.Drawing.Point(716, 0);
+            this.bookNow.Name = "bookNow";
+            this.bookNow.Size = new System.Drawing.Size(194, 90);
+            this.bookNow.TabIndex = 0;
+            this.bookNow.Text = "Book Now!";
+            this.bookNow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bookNow.UseVisualStyleBackColor = true;
+            this.bookNow.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // roomType
             // 
@@ -285,7 +285,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton bookNow;
         private System.Windows.Forms.GroupBox roomType;
         private System.Windows.Forms.RadioButton radioBtnStudio;
         private System.Windows.Forms.RadioButton radioBtnSuite;
