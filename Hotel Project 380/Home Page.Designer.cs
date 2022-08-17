@@ -79,10 +79,10 @@
             this.iconButton1.IconSize = 46;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.Location = new System.Drawing.Point(0, 288);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(226, 31);
+            this.iconButton1.Size = new System.Drawing.Size(226, 46);
             this.iconButton1.TabIndex = 8;
             this.iconButton1.Tag = "Home";
             this.iconButton1.Text = "iconButton1";
@@ -103,7 +103,7 @@
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton8.Location = new System.Drawing.Point(0, 566);
-            this.iconButton8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton8.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton8.Size = new System.Drawing.Size(226, 47);
@@ -269,7 +269,7 @@
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
             this.btnMinimize.Location = new System.Drawing.Point(1050, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(45, 25);
             this.btnMinimize.TabIndex = 3;
@@ -287,7 +287,7 @@
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
             this.btnMaximize.Location = new System.Drawing.Point(1078, 0);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(45, 25);
             this.btnMaximize.TabIndex = 2;
@@ -305,7 +305,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
             this.btnClose.Location = new System.Drawing.Point(1106, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(45, 25);
             this.btnClose.TabIndex = 1;
