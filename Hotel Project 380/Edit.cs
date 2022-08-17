@@ -18,7 +18,20 @@ namespace Hotel_Project_380
          */
 
         //Change SQL connection to HotelDB.mdf
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Documents\GitHub\Hotel-Project-380\HotelDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Downloads\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
+        /// <summary>
+        /// Populate
+        /// 08/08/2022
+        /// Wesley Cox
+        /// 
+        /// Populate is a generic code that will be used to display data from a desired database table
+        /// 
+        /// Input will be from the Cart Table and output will be the Cart Table
+        /// 
+        /// The SQL Data Table
+        /// 
+        /// Algorithm just takes all the table data found and displays
+        /// </summary>
         public void populate()
         {
             /*
@@ -26,7 +39,7 @@ namespace Hotel_Project_380
              */
 
             Con.Open();
-            string Myquery = "select * from GuestInfo_Table";
+            string Myquery = "select * from Cart_Table";
             SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
             SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
             var ds = new DataSet();
@@ -38,6 +51,9 @@ namespace Hotel_Project_380
             }
             Con.Close();
         }
+        /// <summary>
+        /// Initializes the GUI Edit form
+        /// </summary>
         public Edit()
         {
             InitializeComponent();
@@ -53,13 +69,26 @@ namespace Hotel_Project_380
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            /*
-             * Selected Checkin Date for reservation
-             */
-        }
-
+        /// <summary>
+        /// Find Reservation
+        /// Wesley
+        /// 08/09/2022
+        /// 
+        /// This method will take the data entered in the GUI and cross search it in the matching database table for a matching
+        /// reservation. If the data is not a match the program will inform the user that the reservation cannot be found, when 
+        /// a reservation is found it will then display the reservation found on the display box on the right of the page.
+        /// 
+        /// The input is user input into the GUI and the already stored data in the data table, the output is the reservation
+        /// found with all the data in the reservation and not just the information that is looked up
+        /// 
+        /// Data structures used are SQL data tables
+        /// 
+        /// The ALgorithm is quite simple, the code runs a check to see if all data entered matches and if its all matched to the 
+        /// same reservation/data entry
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             /*
@@ -68,8 +97,7 @@ namespace Hotel_Project_380
              * in checkbox form on the right
              */
             Con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from GuestInfo_Table where ReservationId = '"+reservationidtb.Text+"' " +
-                "and firstName = '"+firstnametb.Text+"' and lastName = '"+lastnametb.Text+"' ",Con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Cart_Table where ReservationID = '"+reservationidtb.Text+"' and FirstName = '"+firstnametb.Text+"' and LastName = '"+lastnametb.Text+"' ",Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
@@ -80,7 +108,7 @@ namespace Hotel_Project_380
                  * if a reservation is found, the data from table will now be displayed on the checkbox 
                  * on the right of the form
                  */
-                string Myquery = "select * from GuestInfo_Table where ReservationId = '"+reservationidtb.Text+"'";
+                string Myquery = "select * from Cart_Table where ReservationID = '"+reservationidtb.Text+"'";
                 SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
                 SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
                 var ds = new DataSet();
@@ -95,13 +123,24 @@ namespace Hotel_Project_380
             //and Checkin = '"+checkintb+"'
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            /*
-             * Last Name on Reservation
-             */
-        }
-
+        /// <summary>
+        /// Delete Reservation
+        /// Wesley Cox
+        /// 08/13/2022
+        /// 
+        /// The delete method will enirely depend on if a reservation has been found, the delete method will use the unique identifier
+        /// that finds the reservation to then find the same thing to remove it from the table. Once a reservation is deleted there is
+        /// no bringing back that reservation unless an identical one is made.
+        /// 
+        /// Input values are the same values used for reservation lookup
+        /// 
+        /// Data table 
+        /// 
+        /// The algorithm used is one that takes certain input from a user and looks for an exact match in order to execute the
+        /// deletion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             /*
@@ -109,7 +148,7 @@ namespace Hotel_Project_380
              * I.E. cancelling the reservation
              */
              Con.Open();
-             String query = "delete from GuestInfo_Table where ReservationId =" + reservationidtb.Text + "";
+             String query = "delete from Cart_Table where ReservationID =" + reservationidtb.Text + "";
              SqlCommand cmd = new SqlCommand(query, Con);
              cmd.ExecuteNonQuery();
              MessageBox.Show("Reservation Deleted");
@@ -117,29 +156,6 @@ namespace Hotel_Project_380
             
 
            
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            /*
-             * All reservations that have been found with matching resID, name and checkin 
-             * will appear here for guest to select
-             */
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            /*
-             * Reservation ID from confirmation
-             */
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            /*
-             * First name on reservation
-             */
         }
 
         private void ReservationDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
