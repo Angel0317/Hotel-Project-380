@@ -18,7 +18,7 @@ namespace Hotel_Project_380
          */
 
         //Change SQL connection to HotelDB.mdf
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Documents\GitHub\Hotel-Project-380\HotelDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\angel\OneDrive\Documents\HotelDB.mdf;Integrated Security=True;Connect Timeout=30");
         public void populate()
         {
             /*
