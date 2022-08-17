@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Net;
+
 namespace Hotel_Project_380
 {
     public partial class New_Reservation : Form
@@ -208,6 +211,15 @@ namespace Hotel_Project_380
         private void guestnum_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        
+       
+        private void Email_Click(object sender, EventArgs e)
+        {
+            //Sending Email Functoin
+
+
+           
         }
     }
 }
