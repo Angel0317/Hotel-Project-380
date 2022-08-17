@@ -128,7 +128,7 @@
             this.guestnum.Name = "guestnum";
             this.guestnum.Size = new System.Drawing.Size(121, 23);
             this.guestnum.TabIndex = 14;
-            this.guestnum.SelectedIndexChanged += new System.EventHandler(this.guestnum_SelectedIndexChanged);
+           // this.guestnum.SelectedIndexChanged += new System.EventHandler(this.guestnum_SelectedIndexChanged);
             // 
             // panel1
             // 

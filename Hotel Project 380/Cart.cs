@@ -102,9 +102,7 @@ namespace Hotel_Project_380
             /// 
             /// </summary>
 
-
-
-            /*          try
+      /*  try
             {
                 using (MailMessage mail = new MailMessage())
                 {
@@ -116,7 +114,7 @@ namespace Hotel_Project_380
 
                     using (SmtpClient smtp = new SmtpClient("smpt.gamil.com", 587))
                     {
-                        System.Net.ServicePointManager.ServerCertificateValidationCallback = New System.Net.Security.RemoteCertificateValidationCallback(AddressOf RemoteCertificateValidationCallback)
+                        
                         NetworkCredential networkCredential = new System.Net.NetworkCredential("BlissHotel01@gmail.com", "oroyphioaozaxkta");
                         smtp.Credentials = networkCredential;
                         smtp.UseDefaultCredentials = false;
@@ -125,11 +123,7 @@ namespace Hotel_Project_380
 
                         label1.Text = "Mail Sent";
                     }
-                   Public Shared Function RemoteCertificateValidationCallback(ByVal sender As Object, ByVal certificate As System.Security.Cryptography.X509Certificates.X509Certificate, ByVal chain As System.Security.Cryptography.X509Certificates.X509Chain, ByVal sslPolicyErrors As Net.Security.SslPolicyErrors) As Boolean
-        
-                   Return True
-    
-                   End Function
+               
                 }
             }
 
@@ -155,5 +149,6 @@ namespace Hotel_Project_380
         {
 
         }
+        
     }
 }
