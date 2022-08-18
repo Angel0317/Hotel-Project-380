@@ -162,29 +162,31 @@ namespace Hotel_Project_380
                 Cart.instance.lab7.Text = total_price.ToString();
               
               
-                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE CheckIn IS NULL ", Con);
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE CheckIn IS NULL and CheckOut IS NULL ", Con);
                 myCommand.Connection.Open();
                 object obj = myCommand.ExecuteScalar();
                 if (Convert.ToInt32(obj) > 0)
                 {
-                    SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = 'Studio' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "'", Con);
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
-                    if (dt.Rows[0][0].ToString() == "1")
-                    {
-                        MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
+                    form.Show();
+                    //SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = 'Studio' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "'", Con);
+                    //DataTable dt = new DataTable();
+                    //sda.Fill(dt);
+                    //if (dt.Rows[0][0].ToString() == "1")
+                    //{
+                    //    MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
 
-                    }
-                    else
-                    {
-                        form.Show();
+                    //}
+                    //else
+                    //{
+                    //    form.Show();
 
-                    }
+                    //}
                 }
                 else
                 {
-                    MessageBox.Show("Room selection are all booked. Sorry :(");
+                    MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
                 }
+
                
                 myCommand.Connection.Close();
                
