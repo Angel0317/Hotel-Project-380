@@ -16,7 +16,7 @@ namespace Hotel_Project_380
         Image suite;
         Image pent;
         Image Pres;
-        
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\angel\OneDrive\Documents\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
         public New_Reservation()
         {
             InitializeComponent();
@@ -160,12 +160,23 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 500;
                 Cart.instance.lab7.Text = total_price.ToString();
+                string Studio = "Studio";
 
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '"+Studio+"' and CheckIn = '" + CheckIn_calender.Value.ToString()+ "' and CheckOut = '" + Checkout_calender.Value.ToString()+ "' ", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    MessageBox.Show("Room already reserved.");
 
-                form.Show();
-               
+                }
+                else
+                {
+                    form.Show();
+
+                }
             }
-            else if(radioBtnSuite.Checked && guestnum.SelectedItem != null) //if Suite is selected
+            else if(radioBtnSuite.Checked && guestnum.SelectedItem != null) 
             {
                 suite = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\suitepic2.jpg");
                 Cart.instance.lab1.Text = "Panoramic Suite Stay";
@@ -183,9 +194,24 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 1000;
                 Cart.instance.lab7.Text = total_price.ToString();
-                form.Show();
-                
-               
+                string Suite = "Suite";
+
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Suite + "' and CheckIn = '" + CheckIn_calender.Value.ToString() + "' and CheckOut = '" + Checkout_calender.Value.ToString() + "' ", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    MessageBox.Show("Room already reserved.");
+
+                }
+                else
+                {
+                    form.Show();
+
+                }
+
+
             }
             else if(radioBtnPentHouse.Checked && guestnum.SelectedItem != null)
             {
@@ -205,9 +231,23 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 2000;
                 Cart.instance.lab7.Text = total_price.ToString();
+                string Pent = "PentHouse";
 
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Pent + "' and CheckIn = '" + CheckIn_calender.Value.ToString() + "' and CheckOut = '" + Checkout_calender.Value.ToString() + "' ", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-                form.Show();
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    MessageBox.Show("Room already reserved.");
+
+                }
+                else
+                {
+                    form.Show();
+
+                }
+
             }
             else if (radiobtnPres.Checked && guestnum.SelectedItem != null)
             {
@@ -229,7 +269,22 @@ namespace Hotel_Project_380
                 int total_price = days * 5000;
                 Cart.instance.lab7.Text = total_price.ToString();
 
-                form.Show();
+                string Presidential = "Presidential";
+
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Presidential + "' and CheckIn = '" + CheckIn_calender.Value.ToString() + "' and CheckOut = '" + Checkout_calender.Value.ToString() + "' ", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    MessageBox.Show("Room already reserved.");
+
+                }
+                else
+                {
+                    form.Show();
+
+                }
             }
         }
 
