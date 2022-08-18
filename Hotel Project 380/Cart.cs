@@ -24,7 +24,10 @@ namespace Hotel_Project_380
         public Label lab5;
         public Label lab6;
         public Label lab7; 
+        public Label lab8;
         public PictureBox pic;
+        public string typeofroom = "";
+        
         public Cart()
         {
             InitializeComponent();
@@ -89,7 +92,7 @@ namespace Hotel_Project_380
                
                 string num = " ";
                 cart.Open();
-                SqlCommand room_num = new SqlCommand(" SELECT TOP 1 * FROM RoomInfo_Table WHERE CheckIn IS NULL and CheckOut IS NULL", cart);
+                SqlCommand room_num = new SqlCommand(" SELECT TOP 1 * FROM RoomInfo_Table WHERE RoomType = '"+typeofroom.ToString()+"' and CheckIn IS NULL and CheckOut IS NULL", cart);
                 SqlDataReader reader1;
                 reader1 = room_num.ExecuteReader();
                 if (reader1.Read())

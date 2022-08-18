@@ -160,7 +160,7 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 500;
                 Cart.instance.lab7.Text = total_price.ToString();
-              
+                Cart.instance.typeofroom = "Studio";
               
                 SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE CheckIn IS NULL and CheckOut IS NULL ", Con);
                 myCommand.Connection.Open();
@@ -209,9 +209,9 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 1000;
                 Cart.instance.lab7.Text = total_price.ToString();
-                string Suite = "Suite";
+                Cart.instance.typeofroom = "Suite";
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Suite + "' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = 'Suite' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
@@ -246,9 +246,9 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 2000;
                 Cart.instance.lab7.Text = total_price.ToString();
-                string Pent = "PentHouse";
+                Cart.instance.typeofroom = "PentHouse";
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Pent + "' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = 'PentHouse' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
@@ -283,10 +283,10 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 5000;
                 Cart.instance.lab7.Text = total_price.ToString();
+                Cart.instance.typeofroom = "Presidential";
 
-                string Presidential = "Presidential";
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Presidential + "' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = 'Presidential' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
