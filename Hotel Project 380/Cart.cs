@@ -206,5 +206,25 @@ namespace Hotel_Project_380
         {
 
         }
+
+        private void billingtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addresstxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomDetails_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leavedate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -139,14 +139,14 @@ namespace Hotel_Project_380
             }
            else if (!radioBtnStudio.Checked && !radioBtnSuite.Checked && !radioBtnPentHouse.Checked && !radiobtnPres.Checked) 
            {
-                MessageBox.Show("Please choose a room.");
+                MessageBox.Show("You can't enjoy your stay with us\nif you don't choose a room. :)");
            }
 
-            if (radioBtnStudio.Checked && guestnum.SelectedItem != null) 
+            if (radioBtnStudio.Checked && guestnum.SelectedItem != null)
             {
                 studio = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\studio5.jpg");
                 Cart.instance.lab1.Text = "Studio Deluxe Stay";
-                Cart.instance.lab2.Text = "One King or Two Queen";
+                Cart.instance.lab2.Text = "One King or\nTwo Queen";
                 Cart.instance.lab3.Text = CheckIn_calender.Value.ToString();
                 Cart.instance.lab4.Text = Checkout_calender.Value.ToString();
                 Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
@@ -161,7 +161,7 @@ namespace Hotel_Project_380
                 int total_price = days * 500;
                 Cart.instance.lab7.Text = total_price.ToString();
                 Cart.instance.typeofroom = "Studio";
-              
+
                 SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE RoomType = 'Studio' and CheckIn IS NULL and CheckOut IS NULL ", Con);
                 myCommand.Connection.Open();
                 object obj = myCommand.ExecuteScalar();
@@ -187,11 +187,11 @@ namespace Hotel_Project_380
                     MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
                 }
 
-               
+
                 myCommand.Connection.Close();
-               
+
             }
-            else if(radioBtnSuite.Checked && guestnum.SelectedItem != null) 
+            else if (radioBtnSuite.Checked && guestnum.SelectedItem != null)
             {
                 suite = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\suitepic2.jpg");
                 Cart.instance.lab1.Text = "Panoramic Suite Stay";
@@ -228,7 +228,7 @@ namespace Hotel_Project_380
 
 
             }
-            else if(radioBtnPentHouse.Checked && guestnum.SelectedItem != null)
+            else if (radioBtnPentHouse.Checked && guestnum.SelectedItem != null)
             {
                 pent = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\pent.jpg");
                 Cart.instance.lab1.Text = "Penthouse Sky View Stay";
