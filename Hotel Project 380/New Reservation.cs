@@ -162,7 +162,7 @@ namespace Hotel_Project_380
                 Cart.instance.lab7.Text = total_price.ToString();
                 Cart.instance.typeofroom = "Studio";
               
-                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE CheckIn IS NULL and CheckOut IS NULL ", Con);
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE RoomType = 'Studio' and CheckIn IS NULL and CheckOut IS NULL ", Con);
                 myCommand.Connection.Open();
                 object obj = myCommand.ExecuteScalar();
                 if (Convert.ToInt32(obj) > 0)
