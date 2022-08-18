@@ -90,6 +90,8 @@ namespace Hotel_Project_380
                 SqlCommand cmd = new SqlCommand("insert into Cart_Table values ('" + firstName.Text + "', '" + lastName.Text + "', '" + addresstxt.Text + "', " +
                     "'" + phonetxt.Text + "', '" + emailtxt.Text + "',  '" + zipcodetxt.Text + "', '" + statetxt.Text + "', " +
                     "'" + startdate.Text + "', '" + leavedate.Text + "', '" + totalGuest.Text + "', '" + totalNights.Text + "')", cart);
+                SqlCommand room = new SqlCommand("insert into RoomInfo_Table values ('" + roomKind.Text + "', '" + startdate.Text + "', '" + leavedate.Text + "')", cart);
+                room.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Reservation Confirmed! :D");
                 cart.Close();
