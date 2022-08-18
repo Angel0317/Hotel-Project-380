@@ -160,14 +160,14 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 500;
                 Cart.instance.lab7.Text = total_price.ToString();
-                string Studio = "Studio";
+                string Studio = "Studio Deluxe Stay";
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '"+Studio+"' and CheckIn = '" + CheckIn_calender.Value.ToString()+ "' and CheckOut = '" + Checkout_calender.Value.ToString()+ "' ", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" +Studio+ "' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
                 {
-                    MessageBox.Show("Room already reserved.");
+                    MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
 
                 }
                 else
@@ -196,13 +196,13 @@ namespace Hotel_Project_380
                 Cart.instance.lab7.Text = total_price.ToString();
                 string Suite = "Suite";
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Suite + "' and CheckIn = '" + CheckIn_calender.Value.ToString() + "' and CheckOut = '" + Checkout_calender.Value.ToString() + "' ", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Suite + "' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
                 if (dt.Rows[0][0].ToString() == "1")
                 {
-                    MessageBox.Show("Room already reserved.");
+                    MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
 
                 }
                 else
@@ -233,13 +233,13 @@ namespace Hotel_Project_380
                 Cart.instance.lab7.Text = total_price.ToString();
                 string Pent = "PentHouse";
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Pent + "' and CheckIn = '" + CheckIn_calender.Value.ToString() + "' and CheckOut = '" + Checkout_calender.Value.ToString() + "' ", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Pent + "' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
                 if (dt.Rows[0][0].ToString() == "1")
                 {
-                    MessageBox.Show("Room already reserved.");
+                    MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
 
                 }
                 else
@@ -271,13 +271,13 @@ namespace Hotel_Project_380
 
                 string Presidential = "Presidential";
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Presidential + "' and CheckIn = '" + CheckIn_calender.Value.ToString() + "' and CheckOut = '" + Checkout_calender.Value.ToString() + "' ", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = '" + Presidential + "' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
                 if (dt.Rows[0][0].ToString() == "1")
                 {
-                    MessageBox.Show("Room already reserved.");
+                    MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
 
                 }
                 else
