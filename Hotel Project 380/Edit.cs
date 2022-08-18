@@ -109,7 +109,7 @@ namespace Hotel_Project_380
                  * if a reservation is found, the data from table will now be displayed on the checkbox 
                  * on the right of the form
                  */
-                string Myquery = "select * from Cart_Table where Email = '"+EmailAddresstb.Text+"'";
+                string Myquery = "select * from Cart_Table where Email = '"+emailreservationtb.Text+"'";
                 SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
                 SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
                 var edit = new DataSet();

@@ -42,6 +42,10 @@
             this.RoomNumbertb = new System.Windows.Forms.Label();
             this.AdminDisplaytb = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Admincheckintb = new System.Windows.Forms.Label();
+            this.Admincheckouttb = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminDisplaytb)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +55,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(671, 29);
+            this.label5.Location = new System.Drawing.Point(680, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(472, 52);
@@ -131,7 +135,7 @@
             // 
             // firstnametb
             // 
-            this.firstnametb.Location = new System.Drawing.Point(944, 129);
+            this.firstnametb.Location = new System.Drawing.Point(944, 70);
             this.firstnametb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstnametb.Name = "firstnametb";
             this.firstnametb.Size = new System.Drawing.Size(272, 26);
@@ -139,7 +143,7 @@
             // 
             // lastnametb
             // 
-            this.lastnametb.Location = new System.Drawing.Point(1431, 124);
+            this.lastnametb.Location = new System.Drawing.Point(1431, 65);
             this.lastnametb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastnametb.Name = "lastnametb";
             this.lastnametb.Size = new System.Drawing.Size(272, 26);
@@ -153,7 +157,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(1247, 115);
+            this.label3.Location = new System.Drawing.Point(1247, 56);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 40);
@@ -169,7 +173,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(751, 120);
+            this.label2.Location = new System.Drawing.Point(751, 61);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 40);
@@ -178,7 +182,7 @@
             // 
             // numbertb
             // 
-            this.numbertb.Location = new System.Drawing.Point(454, 134);
+            this.numbertb.Location = new System.Drawing.Point(454, 75);
             this.numbertb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numbertb.Name = "numbertb";
             this.numbertb.Size = new System.Drawing.Size(272, 26);
@@ -193,7 +197,7 @@
             this.RoomNumbertb.BackColor = System.Drawing.Color.White;
             this.RoomNumbertb.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoomNumbertb.ForeColor = System.Drawing.Color.Teal;
-            this.RoomNumbertb.Location = new System.Drawing.Point(225, 120);
+            this.RoomNumbertb.Location = new System.Drawing.Point(225, 61);
             this.RoomNumbertb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RoomNumbertb.Name = "RoomNumbertb";
             this.RoomNumbertb.Size = new System.Drawing.Size(221, 40);
@@ -227,12 +231,64 @@
             this.panel3.TabIndex = 44;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // Admincheckintb
+            // 
+            this.Admincheckintb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Admincheckintb.AutoSize = true;
+            this.Admincheckintb.BackColor = System.Drawing.Color.White;
+            this.Admincheckintb.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admincheckintb.ForeColor = System.Drawing.Color.Teal;
+            this.Admincheckintb.Location = new System.Drawing.Point(515, 119);
+            this.Admincheckintb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Admincheckintb.Name = "Admincheckintb";
+            this.Admincheckintb.Size = new System.Drawing.Size(141, 40);
+            this.Admincheckintb.TabIndex = 47;
+            this.Admincheckintb.Text = "Check In:";
+            // 
+            // Admincheckouttb
+            // 
+            this.Admincheckouttb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Admincheckouttb.AutoSize = true;
+            this.Admincheckouttb.BackColor = System.Drawing.Color.White;
+            this.Admincheckouttb.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admincheckouttb.ForeColor = System.Drawing.Color.Teal;
+            this.Admincheckouttb.Location = new System.Drawing.Point(953, 119);
+            this.Admincheckouttb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Admincheckouttb.Name = "Admincheckouttb";
+            this.Admincheckouttb.Size = new System.Drawing.Size(152, 40);
+            this.Admincheckouttb.TabIndex = 48;
+            this.Admincheckouttb.Text = "Check Out:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(664, 126);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(272, 26);
+            this.dateTimePicker1.TabIndex = 49;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(1112, 126);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(272, 26);
+            this.dateTimePicker2.TabIndex = 50;
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1946, 1077);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Admincheckouttb);
+            this.Controls.Add(this.Admincheckintb);
             this.Controls.Add(this.AdminDisplaytb);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -275,5 +331,9 @@
         private System.Windows.Forms.Label RoomNumbertb;
         private System.Windows.Forms.DataGridView AdminDisplaytb;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label Admincheckintb;
+        private System.Windows.Forms.Label Admincheckouttb;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

@@ -119,12 +119,11 @@ namespace Hotel_Project_380
         {
 
             Con.Open();
-            String query = "delete from Cart_Table where Email =" + numbertb.Text + " and FirstName = '" +firstnametb.Text+ "' and LastName = '" +lastnametb.Text+ "'";
+            String query = "delete from Cart_Table where Email =" + numbertb.Text + " and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "' and delete from RoomInfo_Table where RoomNumber = '" + numbertb.Text + "' and CheckIn = '" + dateTimePicker1 + "' and CheckOut = '" +dateTimePicker2+"'" ;
             SqlCommand cmd = new SqlCommand(query, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Reservation Deleted");
             Con.Close();
-
 
         }
     }
