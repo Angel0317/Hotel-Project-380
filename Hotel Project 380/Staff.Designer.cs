@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
@@ -46,6 +47,7 @@
             this.Admincheckouttb = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminDisplaytb)).BeginInit();
             this.SuspendLayout();
@@ -113,7 +115,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Teal;
-            this.button3.Location = new System.Drawing.Point(960, 196);
+            this.button3.Location = new System.Drawing.Point(1038, 191);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(256, 45);
             this.button3.TabIndex = 36;
@@ -125,11 +127,11 @@
             // 
             this.Reservationtb.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reservationtb.ForeColor = System.Drawing.Color.Teal;
-            this.Reservationtb.Location = new System.Drawing.Point(680, 198);
+            this.Reservationtb.Location = new System.Drawing.Point(758, 193);
             this.Reservationtb.Name = "Reservationtb";
             this.Reservationtb.Size = new System.Drawing.Size(256, 43);
             this.Reservationtb.TabIndex = 35;
-            this.Reservationtb.Text = "Lookup";
+            this.Reservationtb.Text = "Hotel Reservation\'s";
             this.Reservationtb.UseVisualStyleBackColor = true;
             this.Reservationtb.Click += new System.EventHandler(this.Reservationtb_Click_1);
             // 
@@ -209,6 +211,14 @@
             // 
             this.AdminDisplaytb.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.AdminDisplaytb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AdminDisplaytb.DefaultCellStyle = dataGridViewCellStyle1;
             this.AdminDisplaytb.GridColor = System.Drawing.Color.White;
             this.AdminDisplaytb.Location = new System.Drawing.Point(130, 285);
             this.AdminDisplaytb.Name = "AdminDisplaytb";
@@ -279,12 +289,25 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(272, 26);
             this.dateTimePicker2.TabIndex = 50;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Teal;
+            this.button1.Location = new System.Drawing.Point(478, 193);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(256, 43);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "Active Room\'s";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1946, 1077);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Admincheckouttb);
@@ -335,5 +358,6 @@
         private System.Windows.Forms.Label Admincheckouttb;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button button1;
     }
 }

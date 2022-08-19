@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Net;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Hotel_Project_380
 {
@@ -154,9 +158,27 @@ namespace Hotel_Project_380
              cmd.ExecuteNonQuery();
              MessageBox.Show("Reservation Deleted");
              Con.Close();
-            
 
-           
+            using (MailMessage msg = new MailMessage())
+            {
+                msg.From = new MailAddress("BlissHotel01@gmail.com");
+                msg.To.Add(emailreservationtb.Text);
+                msg.Subject = "Bliss Hotel Reservation Email";
+                msg.Body = "<h2>Bliss Hotel: </h2>" + "<h3> \n Dear Mr./Ms.</h3>" + lastnametb.Text + "<h3> Your reservation has been cancelled. </h3>";
+                msg.IsBodyHtml = true;
+                msg.ReplyToList.Add(new MailAddress(emailreservationtb.Text, firstnametb.Text + lastnametb.Text));
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
+                {
+
+                    smtp.Credentials = new NetworkCredential("BlissHotel01@gmail.com", " kkvjnveupeyffqll");
+                    smtp.EnableSsl = true;
+                    smtp.Send(msg);
+                }
+
+            }
+
+
         }
 
         private void ReservationDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
