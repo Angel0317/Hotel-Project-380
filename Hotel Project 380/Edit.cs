@@ -21,9 +21,8 @@ namespace Hotel_Project_380
          * Connect Sql Server data for all relevant reservation information
          */
 
-        //Change SQL connection to HotelDB.mdf
-
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Downloads\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
+        //Add local Database connection
+        SqlConnection Con = new SqlConnection(@"");
         /// <summary>
         /// Populate
         /// 08/08/2022
@@ -159,14 +158,17 @@ namespace Hotel_Project_380
              MessageBox.Show("Reservation Deleted");
              Con.Close();
 
+            /*
+             * When a reservation is cancelled a cancelation email will be sent to the user
+             */
             using (MailMessage msg = new MailMessage())
             {
                 msg.From = new MailAddress("BlissHotel01@gmail.com");
-                msg.To.Add(emailreservationtb.Text);
+                msg.To.Add("wesleyccox@gmail.com");
                 msg.Subject = "Bliss Hotel Reservation Email";
                 msg.Body = "<h2>Bliss Hotel: </h2>" + "<h3> \n Dear Mr./Ms.</h3>" + lastnametb.Text + "<h3> Your reservation has been cancelled. </h3>";
                 msg.IsBodyHtml = true;
-                msg.ReplyToList.Add(new MailAddress(emailreservationtb.Text, firstnametb.Text + lastnametb.Text));
+               // msg.ReplyToList.Add(new MailAddress(emailreservationtb.Text, firstnametb.Text + lastnametb.Text));
 
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
                 {

@@ -16,7 +16,8 @@ namespace Hotel_Project_380
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Downloads\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
+        //Add connection String to local Database
+        SqlConnection Con = new SqlConnection(@"");
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -124,7 +125,7 @@ namespace Hotel_Project_380
         {
 
             Con.Open();
-            String query = "delete from Cart_Table where Email =" + numbertb.Text + " and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "'" ;
+            String query = "delete from Cart_Table where Email ='" + Adminroomtb.Text + "' and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "'" ;
             SqlCommand cmd = new SqlCommand(query, Con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Reservation Deleted");

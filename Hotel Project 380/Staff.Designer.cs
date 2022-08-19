@@ -39,7 +39,7 @@
             this.lastnametb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numbertb = new System.Windows.Forms.TextBox();
+            this.Adminroomtb = new System.Windows.Forms.TextBox();
             this.RoomNumbertb = new System.Windows.Forms.Label();
             this.AdminDisplaytb = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -182,13 +182,13 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "First Name:";
             // 
-            // numbertb
+            // Adminroomtb
             // 
-            this.numbertb.Location = new System.Drawing.Point(454, 75);
-            this.numbertb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.numbertb.Name = "numbertb";
-            this.numbertb.Size = new System.Drawing.Size(272, 26);
-            this.numbertb.TabIndex = 41;
+            this.Adminroomtb.Location = new System.Drawing.Point(454, 75);
+            this.Adminroomtb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Adminroomtb.Name = "Adminroomtb";
+            this.Adminroomtb.Size = new System.Drawing.Size(272, 26);
+            this.Adminroomtb.TabIndex = 41;
             // 
             // RoomNumbertb
             // 
@@ -322,7 +322,7 @@
             this.Controls.Add(this.lastnametb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numbertb);
+            this.Controls.Add(this.Adminroomtb);
             this.Controls.Add(this.RoomNumbertb);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -350,7 +350,7 @@
         private System.Windows.Forms.TextBox lastnametb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox numbertb;
+        private System.Windows.Forms.TextBox Adminroomtb;
         private System.Windows.Forms.Label RoomNumbertb;
         private System.Windows.Forms.DataGridView AdminDisplaytb;
         private System.Windows.Forms.Panel panel3;
