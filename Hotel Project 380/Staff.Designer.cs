@@ -68,9 +68,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.iconButton8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(63, 557);
+            this.panel1.Location = new System.Drawing.Point(63, 598);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1345, 124);
+            this.panel1.Size = new System.Drawing.Size(1345, 83);
             this.panel1.TabIndex = 44;
             // 
             // iconButton8
@@ -89,7 +89,7 @@
             this.iconButton8.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton8.Size = new System.Drawing.Size(162, 124);
+            this.iconButton8.Size = new System.Drawing.Size(162, 83);
             this.iconButton8.TabIndex = 28;
             this.iconButton8.Tag = "Sign Out";
             this.iconButton8.Text = "Sign Out";
@@ -203,10 +203,11 @@
             // 
             this.AdminDisplaytb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.AdminDisplaytb.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AdminDisplaytb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AdminDisplaytb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -214,12 +215,12 @@
             this.AdminDisplaytb.DefaultCellStyle = dataGridViewCellStyle1;
             this.AdminDisplaytb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AdminDisplaytb.GridColor = System.Drawing.Color.White;
-            this.AdminDisplaytb.Location = new System.Drawing.Point(63, 188);
+            this.AdminDisplaytb.Location = new System.Drawing.Point(63, 229);
             this.AdminDisplaytb.Margin = new System.Windows.Forms.Padding(2);
             this.AdminDisplaytb.Name = "AdminDisplaytb";
             this.AdminDisplaytb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.AdminDisplaytb.RowTemplate.Height = 28;
-            this.AdminDisplaytb.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.AdminDisplaytb.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.AdminDisplaytb.Size = new System.Drawing.Size(1345, 369);
             this.AdminDisplaytb.TabIndex = 46;
             this.AdminDisplaytb.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminDisplaytb_CellContentClick);
