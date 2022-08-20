@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
@@ -86,7 +86,7 @@
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton8.Location = new System.Drawing.Point(1183, 0);
-            this.iconButton8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton8.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton8.Size = new System.Drawing.Size(162, 124);
@@ -112,7 +112,7 @@
             this.button3.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Teal;
             this.button3.Location = new System.Drawing.Point(692, 124);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(171, 29);
             this.button3.TabIndex = 36;
@@ -125,7 +125,7 @@
             this.Reservationtb.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reservationtb.ForeColor = System.Drawing.Color.Teal;
             this.Reservationtb.Location = new System.Drawing.Point(505, 125);
-            this.Reservationtb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Reservationtb.Margin = new System.Windows.Forms.Padding(2);
             this.Reservationtb.Name = "Reservationtb";
             this.Reservationtb.Size = new System.Drawing.Size(171, 28);
             this.Reservationtb.TabIndex = 35;
@@ -201,20 +201,21 @@
             // 
             // AdminDisplaytb
             // 
+            this.AdminDisplaytb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.AdminDisplaytb.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.AdminDisplaytb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.AdminDisplaytb.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AdminDisplaytb.DefaultCellStyle = dataGridViewCellStyle1;
             this.AdminDisplaytb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AdminDisplaytb.GridColor = System.Drawing.Color.White;
             this.AdminDisplaytb.Location = new System.Drawing.Point(63, 188);
-            this.AdminDisplaytb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AdminDisplaytb.Margin = new System.Windows.Forms.Padding(2);
             this.AdminDisplaytb.Name = "AdminDisplaytb";
             this.AdminDisplaytb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.AdminDisplaytb.RowTemplate.Height = 28;
@@ -267,7 +268,7 @@
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(443, 82);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
             this.dateTimePicker1.TabIndex = 49;
@@ -276,7 +277,7 @@
             // 
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(741, 82);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(183, 20);
             this.dateTimePicker2.TabIndex = 50;
@@ -286,7 +287,7 @@
             this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Teal;
             this.button1.Location = new System.Drawing.Point(319, 125);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(171, 28);
             this.button1.TabIndex = 51;

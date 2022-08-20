@@ -22,7 +22,7 @@ namespace Hotel_Project_380
          */
 
         //Add local Database connection
-        SqlConnection Con = new SqlConnection(@"");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\angel\OneDrive\Documents\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
         /// <summary>
         /// Populate
         /// 08/08/2022
