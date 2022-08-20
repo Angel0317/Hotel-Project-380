@@ -17,7 +17,7 @@ namespace Hotel_Project_380
             InitializeComponent();
         }
         //Add connection String to local Database
-        SqlConnection Con = new SqlConnection(@"");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\angel\OneDrive\Documents\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
         private void button1_Click(object sender, EventArgs e)
         {
 

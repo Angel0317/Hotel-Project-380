@@ -82,7 +82,7 @@
             this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(226, 46);
+            this.iconButton1.Size = new System.Drawing.Size(226, 49);
             this.iconButton1.TabIndex = 8;
             this.iconButton1.Tag = "Home";
             this.iconButton1.Text = "iconButton1";
