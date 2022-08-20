@@ -137,11 +137,11 @@ namespace Hotel_Project_380
                 SqlCommand reset_room = new SqlCommand(update_room, Con);
                 reset_room.ExecuteNonQuery();
     
-                MessageBox.Show("Reservation Deleted");
+                MessageBox.Show("Mr./Ms." +lastnametb.Text+ " has been checked out.");
             }
             else
             {
-                MessageBox.Show("No reservation was found to cancel.");
+                MessageBox.Show("No reservation was found to check out.");
             }
 
            myCommand.Connection.Close();
