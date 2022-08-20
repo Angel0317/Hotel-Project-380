@@ -125,12 +125,17 @@ namespace Hotel_Project_380
         {
 
             Con.Open();
-            String query = "delete from Cart_Table where Email ='" + Adminroomtb.Text + "' and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "'" ;
+            String query = "delete from Cart_Table where RoomNumber ='" + Adminroomtb.Text + "' and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "'";
             SqlCommand cmd = new SqlCommand(query, Con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Reservation Deleted");
             Con.Close();
 
+            Con.Open();
+            string update_room = "UPDATE RoomInfo_Table SET CheckIn = NULL, CheckOut = NULL WHERE RoomNumber = '" + Adminroomtb.Text + "'";
+            SqlCommand reset_room = new SqlCommand(update_room, Con);
+            reset_room.ExecuteNonQuery();
+            Con.Close();
+            MessageBox.Show("Reservation Deleted");
         }
 
         /// <summary>
