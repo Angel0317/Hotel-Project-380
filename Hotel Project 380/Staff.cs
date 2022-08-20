@@ -124,18 +124,27 @@ namespace Hotel_Project_380
         private void button3_Click_1(object sender, EventArgs e)
         {
 
-            Con.Open();
-            String query = "delete from Cart_Table where RoomNumber ='" + Adminroomtb.Text + "' and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "'";
-            SqlCommand cmd = new SqlCommand(query, Con);
-            cmd.ExecuteNonQuery();
-            Con.Close();
+            SqlCommand myCommand = new SqlCommand("SELECT COUNT(*) FROM Cart_Table WHERE RoomNumber = '"+Adminroomtb.Text+"' and FirstName = '"+firstnametb.Text+"' and LastName = '"+lastnametb.Text+"'", Con);
+            myCommand.Connection.Open();
+            object obj = myCommand.ExecuteScalar();
+            if (Convert.ToInt32(obj) > 0)
+            {
+                String query = "delete from Cart_Table where RoomNumber ='" + Adminroomtb.Text + "' and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                
+                string update_room = "UPDATE RoomInfo_Table SET CheckIn = NULL, CheckOut = NULL WHERE RoomNumber = '" + Adminroomtb.Text + "'";
+                SqlCommand reset_room = new SqlCommand(update_room, Con);
+                reset_room.ExecuteNonQuery();
+    
+                MessageBox.Show("Reservation Deleted");
+            }
+            else
+            {
+                MessageBox.Show("No reservation was found to cancel.");
+            }
 
-            Con.Open();
-            string update_room = "UPDATE RoomInfo_Table SET CheckIn = NULL, CheckOut = NULL WHERE RoomNumber = '" + Adminroomtb.Text + "'";
-            SqlCommand reset_room = new SqlCommand(update_room, Con);
-            reset_room.ExecuteNonQuery();
-            Con.Close();
-            MessageBox.Show("Reservation Deleted");
+           myCommand.Connection.Close();
         }
 
         /// <summary>
