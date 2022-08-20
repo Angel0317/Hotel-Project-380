@@ -19,7 +19,7 @@ namespace Hotel_Project_380
     public partial class Cart : Form
     {
 
-        SqlConnection cart = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\angel\OneDrive\Documents\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection cart = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\Student.IT - STULOAN - 714.004\Downloads\Hotel(2).mdf;Integrated Security=True;Connect Timeout=30");
         public static Cart instance;
         public Label lab1;
         public Label lab2;

@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Net;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Hotel_Project_380
 {
@@ -17,9 +21,8 @@ namespace Hotel_Project_380
          * Connect Sql Server data for all relevant reservation information
          */
 
-        //Change SQL connection to HotelDB.mdf
-
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Student.IT-STULOAN-714.004\Downloads\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
+        //Add local Database connection
+        SqlConnection Con = new SqlConnection(@"");
         /// <summary>
         /// Populate
         /// 08/08/2022
@@ -98,7 +101,7 @@ namespace Hotel_Project_380
              * in checkbox form on the right
              */
             Con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Cart_Table where ReservationID = '"+reservationidtb.Text+"' and FirstName = '"+firstnametb.Text+"' and LastName = '"+lastnametb.Text+"' ",Con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Cart_Table where Email = '"+emailreservationtb.Text+"' and FirstName = '"+firstnametb.Text+"' and LastName = '"+lastnametb.Text+"' ",Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
@@ -109,12 +112,12 @@ namespace Hotel_Project_380
                  * if a reservation is found, the data from table will now be displayed on the checkbox 
                  * on the right of the form
                  */
-                string Myquery = "select * from Cart_Table where ReservationID = '"+reservationidtb.Text+"'";
+                string Myquery = "select * from Cart_Table where Email = '"+emailreservationtb.Text+"'";
                 SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
                 SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
-                var ds = new DataSet();
-                da.Fill(ds);
-                ReservationDisplay.DataSource = ds.Tables[0];
+                var edit = new DataSet();
+                da.Fill(edit);
+                ReservationDisplay.DataSource = edit.Tables[0];
             }
             else
             {
@@ -149,14 +152,35 @@ namespace Hotel_Project_380
              * I.E. cancelling the reservation
              */
              Con.Open();
-             String query = "delete from Cart_Table where ReservationID =" + reservationidtb.Text + "";
+             String query = "delete from Cart_Table where Email =" + EmailAddresstb.Text + "";
              SqlCommand cmd = new SqlCommand(query, Con);
              cmd.ExecuteNonQuery();
              MessageBox.Show("Reservation Deleted");
              Con.Close();
-            
 
-           
+            /*
+             * When a reservation is cancelled a cancelation email will be sent to the user
+             */
+            using (MailMessage msg = new MailMessage())
+            {
+                msg.From = new MailAddress("BlissHotel01@gmail.com");
+                msg.To.Add("wesleyccox@gmail.com");
+                msg.Subject = "Bliss Hotel Reservation Email";
+                msg.Body = "<h2>Bliss Hotel: </h2>" + "<h3> \n Dear Mr./Ms.</h3>" + lastnametb.Text + "<h3> Your reservation has been cancelled. </h3>";
+                msg.IsBodyHtml = true;
+               // msg.ReplyToList.Add(new MailAddress(emailreservationtb.Text, firstnametb.Text + lastnametb.Text));
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
+                {
+
+                    smtp.Credentials = new NetworkCredential("BlissHotel01@gmail.com", " kkvjnveupeyffqll");
+                    smtp.EnableSsl = true;
+                    smtp.Send(msg);
+                }
+
+            }
+
+
         }
 
         private void ReservationDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
