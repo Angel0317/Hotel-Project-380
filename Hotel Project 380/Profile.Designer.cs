@@ -55,9 +55,9 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel2.Location = new System.Drawing.Point(640, 0);
+            this.panel2.Location = new System.Drawing.Point(1000, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(160, 357);
+            this.panel2.Size = new System.Drawing.Size(160, 441);
             this.panel2.TabIndex = 28;
             // 
             // Staff_Password
@@ -66,6 +66,7 @@
             this.Staff_Password.Name = "Staff_Password";
             this.Staff_Password.Size = new System.Drawing.Size(183, 20);
             this.Staff_Password.TabIndex = 27;
+            this.Staff_Password.TextChanged += new System.EventHandler(this.Staff_Password_TextChanged);
             // 
             // Staff_ID
             // 
@@ -79,9 +80,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.iconButton2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 355);
+            this.panel1.Location = new System.Drawing.Point(0, 439);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 95);
+            this.panel1.Size = new System.Drawing.Size(1160, 95);
             this.panel1.TabIndex = 25;
             // 
             // iconButton2
@@ -95,7 +96,7 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
             this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(640, 0);
+            this.iconButton2.Location = new System.Drawing.Point(1000, 0);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(160, 95);
             this.iconButton2.TabIndex = 0;
@@ -133,7 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1160, 534);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Staff_Password);
@@ -144,6 +145,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Profile";
             this.Text = "Profile";
+            this.Load += new System.EventHandler(this.Profile_Load_1);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

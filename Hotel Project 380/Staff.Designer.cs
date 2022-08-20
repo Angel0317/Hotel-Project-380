@@ -63,9 +63,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.iconButton8);
-            this.panel1.Location = new System.Drawing.Point(73, 576);
+            this.panel1.Location = new System.Drawing.Point(-30, 576);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1306, 124);
+            this.panel1.Size = new System.Drawing.Size(1306, 95);
             this.panel1.TabIndex = 44;
             // 
             // iconButton8
@@ -80,7 +80,7 @@
             this.iconButton8.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(1126, 7);
+            this.iconButton8.Location = new System.Drawing.Point(1126, -8);
             this.iconButton8.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -98,9 +98,9 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel2.Location = new System.Drawing.Point(1227, 0);
+            this.panel2.Location = new System.Drawing.Point(1124, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(152, 645);
+            this.panel2.Size = new System.Drawing.Size(152, 616);
             this.panel2.TabIndex = 43;
             // 
             // dateTimePicker1
@@ -217,8 +217,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1387, 700);
+            this.ClientSize = new System.Drawing.Size(1284, 671);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -237,6 +238,7 @@
             this.Name = "Staff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staff";
+            this.Load += new System.EventHandler(this.Staff_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
