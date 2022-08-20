@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
@@ -65,18 +65,17 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.iconButton8);
-            this.panel1.Location = new System.Drawing.Point(0, 576);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(63, 557);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1379, 124);
+            this.panel1.Size = new System.Drawing.Size(1345, 124);
             this.panel1.TabIndex = 44;
             // 
             // iconButton8
             // 
-            this.iconButton8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconButton8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.iconButton8.FlatAppearance.BorderSize = 0;
             this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -86,11 +85,11 @@
             this.iconButton8.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(1163, 7);
+            this.iconButton8.Location = new System.Drawing.Point(1183, 0);
             this.iconButton8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton8.Size = new System.Drawing.Size(177, 115);
+            this.iconButton8.Size = new System.Drawing.Size(162, 124);
             this.iconButton8.TabIndex = 28;
             this.iconButton8.Tag = "Sign Out";
             this.iconButton8.Text = "Sign Out";
@@ -101,12 +100,11 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Location = new System.Drawing.Point(1227, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1408, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(152, 645);
+            this.panel2.Size = new System.Drawing.Size(69, 681);
             this.panel2.TabIndex = 43;
             // 
             // button3
@@ -205,33 +203,33 @@
             // 
             this.AdminDisplaytb.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.AdminDisplaytb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.AdminDisplaytb.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AdminDisplaytb.DefaultCellStyle = dataGridViewCellStyle2;
+            this.AdminDisplaytb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AdminDisplaytb.GridColor = System.Drawing.Color.White;
-            this.AdminDisplaytb.Location = new System.Drawing.Point(87, 185);
+            this.AdminDisplaytb.Location = new System.Drawing.Point(63, 188);
             this.AdminDisplaytb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AdminDisplaytb.Name = "AdminDisplaytb";
             this.AdminDisplaytb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.AdminDisplaytb.RowTemplate.Height = 28;
             this.AdminDisplaytb.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AdminDisplaytb.Size = new System.Drawing.Size(1117, 369);
+            this.AdminDisplaytb.Size = new System.Drawing.Size(1345, 369);
             this.AdminDisplaytb.TabIndex = 46;
             this.AdminDisplaytb.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminDisplaytb_CellContentClick);
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(63, 645);
+            this.panel3.Size = new System.Drawing.Size(63, 681);
             this.panel3.TabIndex = 44;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -302,7 +300,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1297, 700);
+            this.ClientSize = new System.Drawing.Size(1477, 681);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
