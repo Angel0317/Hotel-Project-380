@@ -237,6 +237,11 @@ namespace Hotel_Project_380
             
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 #endregion

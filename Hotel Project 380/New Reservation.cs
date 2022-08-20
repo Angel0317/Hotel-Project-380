@@ -16,7 +16,7 @@ namespace Hotel_Project_380
         Image suite;
         Image pent;
         Image Pres;
-        
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\angel\OneDrive\Documents\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
         public New_Reservation()
         {
             InitializeComponent();
@@ -139,14 +139,14 @@ namespace Hotel_Project_380
             }
            else if (!radioBtnStudio.Checked && !radioBtnSuite.Checked && !radioBtnPentHouse.Checked && !radiobtnPres.Checked) 
            {
-                MessageBox.Show("Please choose a room.");
+                MessageBox.Show("You can't enjoy your stay with us\nif you don't choose a room. :)");
            }
 
-            if (radioBtnStudio.Checked && guestnum.SelectedItem != null) 
+            if (radioBtnStudio.Checked && guestnum.SelectedItem != null)
             {
                 studio = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\studio5.jpg");
                 Cart.instance.lab1.Text = "Studio Deluxe Stay";
-                Cart.instance.lab2.Text = "One King or Two Queen";
+                Cart.instance.lab2.Text = "One King or\nTwo Queen";
                 Cart.instance.lab3.Text = CheckIn_calender.Value.ToString();
                 Cart.instance.lab4.Text = Checkout_calender.Value.ToString();
                 Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
@@ -160,16 +160,29 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 500;
                 Cart.instance.lab7.Text = total_price.ToString();
+                Cart.instance.typeofroom = "Studio";
 
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE RoomType = 'Studio' and CheckIn IS NULL and CheckOut IS NULL ", Con);
+                myCommand.Connection.Open();
+                object obj = myCommand.ExecuteScalar();
+                if (Convert.ToInt32(obj) > 0)
+                {
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
+                }
+                
 
-                form.Show();
-               
+                myCommand.Connection.Close();
+
             }
-            else if(radioBtnSuite.Checked && guestnum.SelectedItem != null) //if Suite is selected
+            else if (radioBtnSuite.Checked && guestnum.SelectedItem != null)
             {
                 suite = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\suitepic2.jpg");
                 Cart.instance.lab1.Text = "Panoramic Suite Stay";
-                Cart.instance.lab2.Text = "One Bedroom\nOne King or Two Queen";
+                Cart.instance.lab2.Text = "One Bedroom\nOne King or\nTwo Queen";
                 Cart.instance.lab3.Text = CheckIn_calender.Value.ToString();
                 Cart.instance.lab4.Text = Checkout_calender.Value.ToString();
                 Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
@@ -183,15 +196,30 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 1000;
                 Cart.instance.lab7.Text = total_price.ToString();
-                form.Show();
-                
-               
+                Cart.instance.typeofroom = "Suite";
+
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE RoomType = 'Suite' and CheckIn IS NULL and CheckOut IS NULL ", Con);
+                myCommand.Connection.Open();
+                object obj = myCommand.ExecuteScalar();
+                if (Convert.ToInt32(obj) > 0)
+                {
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
+                }
+
+
+                myCommand.Connection.Close();
+
+
             }
-            else if(radioBtnPentHouse.Checked && guestnum.SelectedItem != null)
+            else if (radioBtnPentHouse.Checked && guestnum.SelectedItem != null)
             {
                 pent = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\pent.jpg");
                 Cart.instance.lab1.Text = "Penthouse Sky View Stay";
-                Cart.instance.lab2.Text = "Two King Beds\nTwo Master Bedrooms";
+                Cart.instance.lab2.Text = "Double Master\nBedroom with\n Two King Beds";
                 Cart.instance.lab3.Text = CheckIn_calender.Value.ToString();
                 Cart.instance.lab4.Text = Checkout_calender.Value.ToString();
                 Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
@@ -205,15 +233,29 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 2000;
                 Cart.instance.lab7.Text = total_price.ToString();
+                Cart.instance.typeofroom = "PentHouse";
+
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE RoomType = 'PentHouse' and CheckIn IS NULL and CheckOut IS NULL ", Con);
+                myCommand.Connection.Open();
+                object obj = myCommand.ExecuteScalar();
+                if (Convert.ToInt32(obj) > 0)
+                {
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
+                }
 
 
-                form.Show();
+                myCommand.Connection.Close();
+
             }
             else if (radiobtnPres.Checked && guestnum.SelectedItem != null)
             {
                 Pres = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\the palms4.jpg");
                 Cart.instance.lab1.Text = "Presidential Sky Villa";
-                Cart.instance.lab2.Text = "Three Master Bedrooms\nPool Table/Private Pool";
+                Cart.instance.lab2.Text = "Tripe Master\nBedroom with Pool\nTable/Private Pool";
                 Cart.instance.lab3.Text = CheckIn_calender.Value.ToString();
                 Cart.instance.lab4.Text = Checkout_calender.Value.ToString();
                 Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
@@ -228,8 +270,23 @@ namespace Hotel_Project_380
                 Cart.instance.lab6.Text = days.ToString();
                 int total_price = days * 5000;
                 Cart.instance.lab7.Text = total_price.ToString();
+                Cart.instance.typeofroom = "Presidential";
 
-                form.Show();
+
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE RoomType = 'Presidential' and CheckIn IS NULL and CheckOut IS NULL ", Con);
+                myCommand.Connection.Open();
+                object obj = myCommand.ExecuteScalar();
+                if (Convert.ToInt32(obj) > 0)
+                {
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
+                }
+
+
+                myCommand.Connection.Close();
             }
         }
 
@@ -238,6 +295,40 @@ namespace Hotel_Project_380
 
         }
 
+        private void radioBtnSuite_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckIn_calender_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Checkout_calender_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Guest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
 
         /// <summary>
         /// Amarinder Singh

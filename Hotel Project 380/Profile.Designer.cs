@@ -55,6 +55,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Location = new System.Drawing.Point(1243, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -69,6 +70,7 @@
             this.Staff_Password.Name = "Staff_Password";
             this.Staff_Password.Size = new System.Drawing.Size(272, 26);
             this.Staff_Password.TabIndex = 27;
+            this.Staff_Password.TextChanged += new System.EventHandler(this.Staff_Password_TextChanged);
             // 
             // Staff_ID
             // 
@@ -83,6 +85,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.iconButton2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+
             this.panel1.Location = new System.Drawing.Point(0, 546);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
@@ -100,6 +103,7 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
             this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+
             this.iconButton2.Location = new System.Drawing.Point(1173, 0);
             this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton2.Name = "iconButton2";
@@ -141,6 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+
             this.ClientSize = new System.Drawing.Size(1413, 692);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
@@ -153,6 +158,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Profile";
             this.Text = "Profile";
+            this.Load += new System.EventHandler(this.Profile_Load_1);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

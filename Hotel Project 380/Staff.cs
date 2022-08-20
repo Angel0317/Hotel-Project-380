@@ -52,11 +52,13 @@ namespace Hotel_Project_380
         }
 
         private void iconButton8_Click_1(object sender, EventArgs e)
+        {  
+             this.Close();
+        }
+
+        private void Staff_Load(object sender, EventArgs e)
         {
 
-            Form1 mainf = new Form1();
-            mainf.Show();
-            this.Close();
         }
 
         private void Staff_Load(object sender, EventArgs e)
