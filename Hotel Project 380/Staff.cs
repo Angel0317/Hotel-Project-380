@@ -61,10 +61,8 @@ namespace Hotel_Project_380
 
         }
 
-        private void Staff_Load(object sender, EventArgs e)
-        {
 
-        }
+        //}
         /// <summary>
         /// Guest Reservation Lookup
         /// Wesley Cox
