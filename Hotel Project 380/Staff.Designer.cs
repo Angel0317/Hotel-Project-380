@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
@@ -43,10 +43,6 @@
             this.RoomNumbertb = new System.Windows.Forms.Label();
             this.AdminDisplaytb = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Admincheckintb = new System.Windows.Forms.Label();
-            this.Admincheckouttb = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminDisplaytb)).BeginInit();
@@ -205,23 +201,23 @@
             this.AdminDisplaytb.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.AdminDisplaytb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AdminDisplaytb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.AdminDisplaytb.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AdminDisplaytb.DefaultCellStyle = dataGridViewCellStyle1;
             this.AdminDisplaytb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AdminDisplaytb.GridColor = System.Drawing.Color.White;
-            this.AdminDisplaytb.Location = new System.Drawing.Point(63, 229);
+            this.AdminDisplaytb.Location = new System.Drawing.Point(63, 190);
             this.AdminDisplaytb.Margin = new System.Windows.Forms.Padding(2);
             this.AdminDisplaytb.Name = "AdminDisplaytb";
             this.AdminDisplaytb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.AdminDisplaytb.RowTemplate.Height = 28;
             this.AdminDisplaytb.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.AdminDisplaytb.Size = new System.Drawing.Size(1345, 369);
+            this.AdminDisplaytb.Size = new System.Drawing.Size(1345, 408);
             this.AdminDisplaytb.TabIndex = 46;
             this.AdminDisplaytb.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminDisplaytb_CellContentClick);
             // 
@@ -234,54 +230,6 @@
             this.panel3.Size = new System.Drawing.Size(63, 681);
             this.panel3.TabIndex = 44;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // Admincheckintb
-            // 
-            this.Admincheckintb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Admincheckintb.AutoSize = true;
-            this.Admincheckintb.BackColor = System.Drawing.Color.White;
-            this.Admincheckintb.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admincheckintb.ForeColor = System.Drawing.Color.Teal;
-            this.Admincheckintb.Location = new System.Drawing.Point(343, 77);
-            this.Admincheckintb.Name = "Admincheckintb";
-            this.Admincheckintb.Size = new System.Drawing.Size(97, 28);
-            this.Admincheckintb.TabIndex = 47;
-            this.Admincheckintb.Text = "Check In:";
-            // 
-            // Admincheckouttb
-            // 
-            this.Admincheckouttb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Admincheckouttb.AutoSize = true;
-            this.Admincheckouttb.BackColor = System.Drawing.Color.White;
-            this.Admincheckouttb.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admincheckouttb.ForeColor = System.Drawing.Color.Teal;
-            this.Admincheckouttb.Location = new System.Drawing.Point(635, 77);
-            this.Admincheckouttb.Name = "Admincheckouttb";
-            this.Admincheckouttb.Size = new System.Drawing.Size(106, 28);
-            this.Admincheckouttb.TabIndex = 48;
-            this.Admincheckouttb.Text = "Check Out:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(443, 82);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
-            this.dateTimePicker1.TabIndex = 49;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(741, 82);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(183, 20);
-            this.dateTimePicker2.TabIndex = 50;
             // 
             // button1
             // 
@@ -304,10 +252,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1477, 681);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.Admincheckouttb);
-            this.Controls.Add(this.Admincheckintb);
             this.Controls.Add(this.AdminDisplaytb);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -349,10 +293,6 @@
         private System.Windows.Forms.Label RoomNumbertb;
         private System.Windows.Forms.DataGridView AdminDisplaytb;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label Admincheckintb;
-        private System.Windows.Forms.Label Admincheckouttb;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button button1;
     }
 }

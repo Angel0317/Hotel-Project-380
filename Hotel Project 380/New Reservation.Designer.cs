@@ -34,22 +34,22 @@
             this.Checkout_calender = new System.Windows.Forms.DateTimePicker();
             this.CheckIn_calender = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Guest = new System.Windows.Forms.Label();
             this.guestnum = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.bookNow = new FontAwesome.Sharp.IconButton();
             this.roomType = new System.Windows.Forms.GroupBox();
             this.radiobtnPres = new System.Windows.Forms.RadioButton();
             this.radioBtnPentHouse = new System.Windows.Forms.RadioButton();
             this.radioBtnSuite = new System.Windows.Forms.RadioButton();
             this.radioBtnStudio = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.roomType.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -79,21 +79,21 @@
             // Checkout_calender
             // 
             this.Checkout_calender.Location = new System.Drawing.Point(260, 379);
-            this.Checkout_calender.MinDate = new System.DateTime(2022, 8, 20, 0, 0, 0, 0);
+            this.Checkout_calender.MinDate = new System.DateTime(2022, 8, 22, 0, 0, 0, 0);
             this.Checkout_calender.Name = "Checkout_calender";
             this.Checkout_calender.Size = new System.Drawing.Size(200, 20);
             this.Checkout_calender.TabIndex = 10;
-            this.Checkout_calender.Value = new System.DateTime(2022, 8, 20, 6, 38, 34, 0);
+            this.Checkout_calender.Value = new System.DateTime(2022, 8, 22, 0, 0, 0, 0);
             this.Checkout_calender.ValueChanged += new System.EventHandler(this.Checkout_calender_ValueChanged);
             // 
             // CheckIn_calender
             // 
             this.CheckIn_calender.Location = new System.Drawing.Point(21, 379);
-            this.CheckIn_calender.MinDate = new System.DateTime(2022, 8, 20, 0, 0, 0, 0);
+            this.CheckIn_calender.MinDate = new System.DateTime(2022, 8, 22, 0, 0, 0, 0);
             this.CheckIn_calender.Name = "CheckIn_calender";
             this.CheckIn_calender.Size = new System.Drawing.Size(200, 20);
             this.CheckIn_calender.TabIndex = 9;
-            this.CheckIn_calender.Value = new System.DateTime(2022, 8, 20, 6, 38, 41, 0);
+            this.CheckIn_calender.Value = new System.DateTime(2022, 8, 22, 0, 0, 0, 0);
             this.CheckIn_calender.ValueChanged += new System.EventHandler(this.CheckIn_calender_ValueChanged);
             // 
             // panel3
@@ -113,6 +113,32 @@
             this.panel3.Size = new System.Drawing.Size(478, 696);
             this.panel3.TabIndex = 16;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 48);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(448, 250);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(47, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(390, 45);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Book Your Escape Today.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Guest
             // 
@@ -134,9 +160,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "5",
-            "6"});
+            "4"});
             this.guestnum.Location = new System.Drawing.Point(206, 474);
             this.guestnum.Name = "guestnum";
             this.guestnum.Size = new System.Drawing.Size(203, 23);
@@ -153,6 +177,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1071, 90);
             this.panel1.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(3, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(458, 34);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Stay Up, stay shiny, and get your rest on!";
             // 
             // bookNow
             // 
@@ -203,7 +238,7 @@
             this.radiobtnPres.Name = "radiobtnPres";
             this.radiobtnPres.Size = new System.Drawing.Size(1065, 121);
             this.radiobtnPres.TabIndex = 23;
-            this.radiobtnPres.Text = "Three Bedroom Presidential Suite  \r\n3 King Beds\r\nMax Guests 6\r\n$5000.00 avg/night" +
+            this.radiobtnPres.Text = "Three Bedroom Presidential Suite  \r\n3 King Beds\r\nMax Guests 4\r\n$5000.00 avg/night" +
     "";
             this.radiobtnPres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radiobtnPres.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -264,43 +299,6 @@
             this.radioBtnStudio.UseVisualStyleBackColor = true;
             this.radioBtnStudio.CheckedChanged += new System.EventHandler(this.radioBtnStudio_CheckedChanged);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(47, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(390, 45);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Book Your Escape Today.";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 48);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(448, 250);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(3, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(458, 34);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Stay Up, stay shiny, and get your rest on!";
-            // 
             // New_Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,11 +316,11 @@
             this.Load += new System.EventHandler(this.New_Reservation_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.roomType.ResumeLayout(false);
             this.roomType.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

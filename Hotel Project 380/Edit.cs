@@ -161,24 +161,24 @@ namespace Hotel_Project_380
             /*
              * When a reservation is cancelled a cancelation email will be sent to the user
              */
-            using (MailMessage msg = new MailMessage())
-            {
-                msg.From = new MailAddress("BlissHotel01@gmail.com");
-                msg.To.Add("wesleyccox@gmail.com");
-                msg.Subject = "Bliss Hotel Reservation Email";
-                msg.Body = "<h2>Bliss Hotel: </h2>" + "<h3> \n Dear Mr./Ms.</h3>" + lastnametb.Text + "<h3> Your reservation has been cancelled. </h3>";
-                msg.IsBodyHtml = true;
-               // msg.ReplyToList.Add(new MailAddress(emailreservationtb.Text, firstnametb.Text + lastnametb.Text));
+            //using (MailMessage msg = new MailMessage())
+            //{
+            //    msg.From = new MailAddress("BlissHotel01@gmail.com");
+            //    msg.To.Add("wesleyccox@gmail.com");
+            //    msg.Subject = "Bliss Hotel Reservation Email";
+            //    msg.Body = "<h2>Bliss Hotel: </h2>" + "<h3> \n Dear Mr./Ms.</h3>" + lastnametb.Text + "<h3> Your reservation has been cancelled. </h3>";
+            //    msg.IsBodyHtml = true;
+            //   // msg.ReplyToList.Add(new MailAddress(emailreservationtb.Text, firstnametb.Text + lastnametb.Text));
 
-                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
-                {
+            //    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
+            //    {
 
-                    smtp.Credentials = new NetworkCredential("BlissHotel01@gmail.com", " kkvjnveupeyffqll");
-                    smtp.EnableSsl = true;
-                    smtp.Send(msg);
-                }
+            //        smtp.Credentials = new NetworkCredential("BlissHotel01@gmail.com", " kkvjnveupeyffqll");
+            //        smtp.EnableSsl = true;
+            //        smtp.Send(msg);
+            //    }
 
-            }
+            //}
 
 
         }
@@ -188,6 +188,30 @@ namespace Hotel_Project_380
             /*
              * Searched reservation will be displayed here from the guestinfopage
              */
+        }
+       
+        private void Editbtn_Click(object sender, EventArgs e)
+        {
+            Save_edit form = new Save_edit();
+            Con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Cart_Table where Email = '" + emailreservationtb.Text + "' and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "' ", Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+               
+                Save_edit.instance.first_name= firstnametb.ToString();
+
+                form.BringToFront();
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show("Reservation not found.");
+            }
+            Con.Close();
+           
+
         }
     }
 }
