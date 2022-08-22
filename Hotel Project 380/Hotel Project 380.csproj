@@ -179,12 +179,6 @@
     <Compile Include="Edit.Designer.cs">
       <DependentUpon>Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Save Edit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Save Edit.Designer.cs">
-      <DependentUpon>Save Edit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Home Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,9 +217,6 @@
     <EmbeddedResource Include="Edit.resx">
       <DependentUpon>Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Save Edit.resx">
-      <DependentUpon>Save Edit.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home Page.resx">
       <DependentUpon>Home Page.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,7 +226,6 @@
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -263,7 +253,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="pics\bookpicture5.jpg" />
     <Content Include="pics\pent.jpg" />
     <Content Include="pics\studio5.jpg" />
     <Content Include="pics\suitepic2.jpg" />
