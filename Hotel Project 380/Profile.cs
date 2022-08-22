@@ -49,8 +49,17 @@ namespace Hotel_Project_380
         {
             if (Staff_ID.Text == "admin" && Staff_Password.Text == "admin")
             {
-                new Staff().Show();
-                this.Hide();
+                Staff form = new Staff();
+                Staff_ID.Clear();
+                Staff_Password.Clear();
+                Staff_ID.Focus();
+                form.BringToFront();
+                form.Show();
+            }
+            else if (Staff_ID.Text == "" || Staff_Password.Text == "")
+            {
+                MessageBox.Show("Please fill out empty text box to sign in.");
+                Staff_ID.Focus();
             }
             else
             {
@@ -59,6 +68,16 @@ namespace Hotel_Project_380
                 Staff_Password.Clear();
                 Staff_ID.Focus();
             }
+        }
+
+        private void Profile_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Staff_Password_TextChanged(object sender, EventArgs e)
+        {
+            Staff_Password.UseSystemPasswordChar = true;
         }
     }
 }

@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Net;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Hotel_Project_380
 {
@@ -89,10 +93,10 @@ namespace Hotel_Project_380
             }
             else
             {
-               
+
                 string num = " ";
                 cart.Open();
-                SqlCommand room_num = new SqlCommand(" SELECT TOP 1 * FROM RoomInfo_Table WHERE RoomType = '"+typeofroom.ToString()+"' and CheckIn IS NULL and CheckOut IS NULL", cart);
+                SqlCommand room_num = new SqlCommand(" SELECT TOP 1 * FROM RoomInfo_Table WHERE RoomType = '" + typeofroom.ToString() + "' and CheckIn IS NULL and CheckOut IS NULL", cart);
                 SqlDataReader reader1;
                 reader1 = room_num.ExecuteReader();
                 if (reader1.Read())
@@ -105,77 +109,58 @@ namespace Hotel_Project_380
                 cart.Open();
                 SqlCommand cmd = new SqlCommand("insert into Cart_Table values ('" + firstName.Text + "', '" + lastName.Text + "', '" + addresstxt.Text + "', " +
                     "'" + phonetxt.Text + "', '" + emailtxt.Text + "',  '" + zipcodetxt.Text + "', '" + statetxt.Text + "', " +
-                    "'" + startdate.Text + "', '" + leavedate.Text + "', '" + totalGuest.Text + "', '" + totalNights.Text + "', '"+num.ToString()+"')", cart);
+                    "'" + startdate.Text + "', '" + leavedate.Text + "', '" + totalGuest.Text + "', '" + totalNights.Text + "', '" + num.ToString() + "')", cart);
                 cmd.ExecuteNonQuery();
                 cart.Close();
 
                 cart.Open();
-                SqlCommand room_assign = new SqlCommand("UPDATE RoomInfo_Table SET CheckIn = '"+startdate.Text+"', CheckOut = '"+leavedate.Text+"' WHERE RoomNumber = '"+num+"'", cart);
-                 room_assign.ExecuteNonQuery();
+                SqlCommand room_assign = new SqlCommand("UPDATE RoomInfo_Table SET CheckIn = '" + startdate.Text + "', CheckOut = '" + leavedate.Text + "' WHERE RoomNumber = '" + num + "'", cart);
+                room_assign.ExecuteNonQuery();
                 cart.Close();
                 this.Close();
-
                 MessageBox.Show("Reservation Confirmed! :D");
-          
-              
-            }
 
-        
+                ///<summary>
+                ///Sending Email
+                ///Ted Wu
+                ///8/15/2022-present
+                ///
+                /// The Sending Email function will send out the email with confirmation ID and all the reservation detail that's restored in the sql table.
+                ///
+                /// The current code is unfinished due to google close the access to the less secure app which need to connect with SMTP server with applicatoin code
+                /// But it also give out an error says SMTP server needs secure connection, currently looking into and try out some solution.
+                ///
+                /// Input value will be used as the user type in the cart, output will be the email that's sent out.
+                ///
+                /// Datat structure is used from the sql table
+                ///
+                /// </summary>
+
+                //string email = emailtxt.Text;
+
+                //using (MailMessage msg = new MailMessage())
+                //{
+                //    msg.From = new MailAddress("BlissHotel01@gmail.com");
+                //    msg.To.Add(new MailAddress(email));
+                //    msg.Subject = "Bliss Hotel Reservation Email";
+                //    msg.Body = "<h2>Bliss Hotel: Congration! your reservation has been confirmed.</h2>" + "<h3> \n Dear Mr./Ms.</h3>" + lastName.Text + "<h3>, thank you for staying with us. </h3>" + "<h3> \n Check-IN Date:+ startdate.Text</h3>" + "<h3> \n Check-Out Date:+ leavedate.Text</h3>" + "<h3> \n RoomNumber </h3>" + "<h3> \n Confirmation ID:</h3>";
+                //    msg.IsBodyHtml = true;
+                //    msg.ReplyToList.Add(new MailAddress(email, firstName.Text + lastName.Text));
+
+                //    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
+                //    {
+
+                //        smtp.Credentials = new NetworkCredential("BlissHotel01@gmail.com", " kkvjnveupeyffqll");
+                //        smtp.EnableSsl = true;
+                //        smtp.Send(msg);
+                //    }
+
+                //}
+            } 
         }
 
-        ///<summary>
-        ///Sending Email
-        ///Ted Wu
-        ///8/15/2022-present
-        ///
-        /// The Sending Email function will send out the email with confirmation ID and all the reservation detail that's restored in the sql table.
-        ///
-        /// The current code is unfinished due to google close the access to the less secure app which need to connect with SMTP server with applicatoin code
-        /// But it also give out an error says SMTP server needs secure connection, currently looking into and try out some solution.
-        ///
-        /// Input value will be used as the user type in the cart, output will be the email that's sent out.
-        ///
-        /// Datat structure is used from the sql table
-        ///
-        /// </summary>
 
 
-
-        /*          try
-        {
-            using (MailMessage mail = new MailMessage())
-            {
-                mail.From = new MailAddress("BlissHotel01@gmail.com");
-                mail.To.Add("emailtxt.Text");
-                mail.Subject = "Test Sending Mail";
-                mail.Body = "<h1> This is Body</h1>";
-                mail.IsBodyHtml = true;
-
-                using (SmtpClient smtp = new SmtpClient("smpt.gamil.com", 587))
-                {
-                    System.Net.ServicePointManager.ServerCertificateValidationCallback = New System.Net.Security.RemoteCertificateValidationCallback(AddressOf RemoteCertificateValidationCallback)
-                    NetworkCredential networkCredential = new System.Net.NetworkCredential("BlissHotel01@gmail.com", "oroyphioaozaxkta");
-                    smtp.Credentials = networkCredential;
-                    smtp.UseDefaultCredentials = false;
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
-
-                    label1.Text = "Mail Sent";
-                }
-               Public Shared Function RemoteCertificateValidationCallback(ByVal sender As Object, ByVal certificate As System.Security.Cryptography.X509Certificates.X509Certificate, ByVal chain As System.Security.Cryptography.X509Certificates.X509Chain, ByVal sslPolicyErrors As Net.Security.SslPolicyErrors) As Boolean
-
-               Return True
-
-               End Function
-            }
-        }
-
-        catch (Exception ex)
-        {
-            label1.Text = ex.Message;
-
-        }
-        */
 
         private void Cart_Load(object sender, EventArgs e)
         {
@@ -223,6 +208,31 @@ namespace Hotel_Project_380
         }
 
         private void leavedate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Summary_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void totalGuest_Click(object sender, EventArgs e)
         {
 
         }

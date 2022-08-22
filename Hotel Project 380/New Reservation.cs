@@ -168,25 +168,12 @@ namespace Hotel_Project_380
                 if (Convert.ToInt32(obj) > 0)
                 {
                     form.Show();
-                    //SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = 'Studio' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "'", Con);
-                    //DataTable dt = new DataTable();
-                    //sda.Fill(dt);
-                    //if (dt.Rows[0][0].ToString() == "1")
-                    //{
-                    //    MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
-
-                    //}
-                    //else
-                    //{
-                    //    form.Show();
-
-                    //}
                 }
                 else
                 {
                     MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
                 }
-
+                
 
                 myCommand.Connection.Close();
 
@@ -195,7 +182,7 @@ namespace Hotel_Project_380
             {
                 suite = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\suitepic2.jpg");
                 Cart.instance.lab1.Text = "Panoramic Suite Stay";
-                Cart.instance.lab2.Text = "One Bedroom\nOne King or Two Queen";
+                Cart.instance.lab2.Text = "One Bedroom\nOne King or\nTwo Queen";
                 Cart.instance.lab3.Text = CheckIn_calender.Value.ToString();
                 Cart.instance.lab4.Text = Checkout_calender.Value.ToString();
                 Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
@@ -211,20 +198,20 @@ namespace Hotel_Project_380
                 Cart.instance.lab7.Text = total_price.ToString();
                 Cart.instance.typeofroom = "Suite";
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = 'Suite' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows[0][0].ToString() == "1")
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE RoomType = 'Suite' and CheckIn IS NULL and CheckOut IS NULL ", Con);
+                myCommand.Connection.Open();
+                object obj = myCommand.ExecuteScalar();
+                if (Convert.ToInt32(obj) > 0)
                 {
-                    MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
-
+                    form.Show();
                 }
                 else
                 {
-                    form.Show();
-
+                    MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
                 }
+
+
+                myCommand.Connection.Close();
 
 
             }
@@ -232,7 +219,7 @@ namespace Hotel_Project_380
             {
                 pent = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\pent.jpg");
                 Cart.instance.lab1.Text = "Penthouse Sky View Stay";
-                Cart.instance.lab2.Text = "Two King Beds\nTwo Master Bedrooms";
+                Cart.instance.lab2.Text = "Double Master\nBedroom with\n Two King Beds";
                 Cart.instance.lab3.Text = CheckIn_calender.Value.ToString();
                 Cart.instance.lab4.Text = Checkout_calender.Value.ToString();
                 Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
@@ -248,27 +235,27 @@ namespace Hotel_Project_380
                 Cart.instance.lab7.Text = total_price.ToString();
                 Cart.instance.typeofroom = "PentHouse";
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = 'PentHouse' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows[0][0].ToString() == "1")
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE RoomType = 'PentHouse' and CheckIn IS NULL and CheckOut IS NULL ", Con);
+                myCommand.Connection.Open();
+                object obj = myCommand.ExecuteScalar();
+                if (Convert.ToInt32(obj) > 0)
                 {
-                    MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
-
+                    form.Show();
                 }
                 else
                 {
-                    form.Show();
-
+                    MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
                 }
+
+
+                myCommand.Connection.Close();
 
             }
             else if (radiobtnPres.Checked && guestnum.SelectedItem != null)
             {
                 Pres = Image.FromFile(@"C:\Users\angel\source\repos\Hotel-Project-380\Hotel Project 380\pics\the palms4.jpg");
                 Cart.instance.lab1.Text = "Presidential Sky Villa";
-                Cart.instance.lab2.Text = "Three Master Bedrooms\nPool Table/Private Pool";
+                Cart.instance.lab2.Text = "Tripe Master\nBedroom with Pool\nTable/Private Pool";
                 Cart.instance.lab3.Text = CheckIn_calender.Value.ToString();
                 Cart.instance.lab4.Text = Checkout_calender.Value.ToString();
                 Cart.instance.lab5.Text = guestnum.SelectedItem.ToString();
@@ -286,20 +273,20 @@ namespace Hotel_Project_380
                 Cart.instance.typeofroom = "Presidential";
 
 
-                SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from RoomInfo_Table where RoomType = 'Presidential' and CheckIn < '" + Checkout_calender.Value.ToString() + "' and CheckOut > '" + CheckIn_calender.Value.ToString() + "' ", Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows[0][0].ToString() == "1")
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(1) FROM RoomInfo_Table WHERE RoomType = 'Presidential' and CheckIn IS NULL and CheckOut IS NULL ", Con);
+                myCommand.Connection.Open();
+                object obj = myCommand.ExecuteScalar();
+                if (Convert.ToInt32(obj) > 0)
                 {
-                    MessageBox.Show("Room already reserved for the following dates.\nChoose new dates.");
-
+                    form.Show();
                 }
                 else
                 {
-                    form.Show();
-
+                    MessageBox.Show("Room selection are all booked.\nOur apologies. :(");
                 }
+
+
+                myCommand.Connection.Close();
             }
         }
 
@@ -308,6 +295,40 @@ namespace Hotel_Project_380
 
         }
 
+        private void radioBtnSuite_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckIn_calender_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Checkout_calender_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Guest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
 
         /// <summary>
         /// Amarinder Singh
