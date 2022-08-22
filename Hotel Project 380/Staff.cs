@@ -161,15 +161,6 @@ namespace Hotel_Project_380
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            //Con.Open();
-            //string Myquery = "select * from RoomInfo_Table";
-            //SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
-            //SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
-            //var rooms = new DataSet();
-            //da.Fill(rooms);
-            //AdminDisplaytb.DataSource = rooms.Tables[0];
-            //Con.Close();
-
             Con.Open();
             string query = "Select * from RoomInfo_Table";
             SqlDataAdapter da = new SqlDataAdapter(query,Con);
