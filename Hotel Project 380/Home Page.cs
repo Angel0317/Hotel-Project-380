@@ -238,9 +238,34 @@ namespace Hotel_Project_380
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void iconButton5_Click_1(object sender, EventArgs e)
         {
+            loadform(new New_Reservation());
+        }
 
+        private void iconButton10_Click_1(object sender, EventArgs e)
+        {
+            loadform(new Profile());
+        }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+            loadform(new Edit());
+        }
+
+        private void iconButton12_Click(object sender, EventArgs e)
+        {
+            loadform(new New_Reservation());
+        }
+
+        private void iconButton7_Click_1(object sender, EventArgs e)
+        {
+            loadform(new About());
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
