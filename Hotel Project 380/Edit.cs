@@ -147,43 +147,52 @@ namespace Hotel_Project_380
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
+            sendMailToCustomer(lastnametb.Text, emailreservationtb.Text);
             /*
              * Selected reservation from CheckedListBox1 will be deleted from database
              * I.E. cancelling the reservation
              */
-             Con.Open();
-             String query = "delete from Cart_Table where Email =" + EmailAddresstb.Text + "";
-             SqlCommand cmd = new SqlCommand(query, Con);
-             cmd.ExecuteNonQuery();
-             MessageBox.Show("Reservation Deleted");
-             Con.Close();
+            if (EmailAddresstb.Text == "" || roomnum.Text == "")
+            {
+                MessageBox.Show("Please enter room number or email address.");
+            }
+            else
+            {
+                Con.Open();
+                String query = "delete from Cart_Table where Email =" + EmailAddresstb.Text + "";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                string update_room = "UPDATE RoomInfo_Table SET CheckIn = NULL, CheckOut = NULL WHERE RoomNumber = '" + roomnum.Text + "'";
+                SqlCommand reset_room = new SqlCommand(update_room, Con);
+                reset_room.ExecuteNonQuery();
+                MessageBox.Show("Reservation Deleted");
+                Con.Close();
+            }
 
-            /*
-             * When a reservation is cancelled a cancelation email will be sent to the user
-             */
-            //using (MailMessage msg = new MailMessage())
-            //{
-            //    msg.From = new MailAddress("BlissHotel01@gmail.com");
-            //    msg.To.Add("wesleyccox@gmail.com");
-            //    msg.Subject = "Bliss Hotel Reservation Email";
-            //    msg.Body = "<h2>Bliss Hotel: </h2>" + "<h3> \n Dear Mr./Ms.</h3>" + lastnametb.Text + "<h3> Your reservation has been cancelled. </h3>";
-            //    msg.IsBodyHtml = true;
-            //   // msg.ReplyToList.Add(new MailAddress(emailreservationtb.Text, firstnametb.Text + lastnametb.Text));
-
-            //    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
-            //    {
-
-            //        smtp.Credentials = new NetworkCredential("BlissHotel01@gmail.com", " kkvjnveupeyffqll");
-            //        smtp.EnableSsl = true;
-            //        smtp.Send(msg);
-            //    }
-
-            //}
 
 
         }
 
-        private void ReservationDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        protected void sendMailToCustomer(String name, string email)
+        {
+            MailMessage msg = new MailMessage();
+            msg.From = new MailAddress("BlissHotel01@gmail.com");
+            msg.To.Add(email);
+            msg.Subject = "Bliss Hotel Reservation Email";
+            msg.Body = "<h2>Bliss Hotel: </h2>" + "<h3> \n Dear Mr./Ms.</h3>" + name + "<h3> Your reservation has been cancelled. </h3>";
+            msg.IsBodyHtml = true;
+            msg.ReplyToList.Add(new MailAddress(email, name));
+
+            using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
+            {
+
+                smtp.Credentials = new NetworkCredential("BlissHotel01@gmail.com", " kkvjnveupeyffqll");
+                smtp.EnableSsl = true;
+                smtp.Send(msg);
+            }
+
+        }
+            private void ReservationDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             /*
              * Searched reservation will be displayed here from the guestinfopage
@@ -211,6 +220,11 @@ namespace Hotel_Project_380
             }
             Con.Close();
            
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

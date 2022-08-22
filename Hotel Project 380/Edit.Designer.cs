@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EmailAddresstb = new System.Windows.Forms.Label();
             this.emailreservationtb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +40,8 @@
             this.checkintb = new System.Windows.Forms.DateTimePicker();
             this.ReservationDisplay = new System.Windows.Forms.DataGridView();
             this.Editbtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.roomnum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ReservationDisplay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +115,7 @@
             // 
             this.Reservationtb.Font = new System.Drawing.Font("Harlow Solid Italic", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reservationtb.ForeColor = System.Drawing.Color.Teal;
-            this.Reservationtb.Location = new System.Drawing.Point(287, 222);
+            this.Reservationtb.Location = new System.Drawing.Point(284, 279);
             this.Reservationtb.Margin = new System.Windows.Forms.Padding(2);
             this.Reservationtb.Name = "Reservationtb";
             this.Reservationtb.Size = new System.Drawing.Size(89, 26);
@@ -144,9 +146,9 @@
             // 
             // ReservationDisplay
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.ReservationDisplay.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.ReservationDisplay.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.ReservationDisplay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ReservationDisplay.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.ReservationDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -176,12 +178,36 @@
             this.Editbtn.UseVisualStyleBackColor = true;
             this.Editbtn.Click += new System.EventHandler(this.Editbtn_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(48, 207);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 56);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "*Required for cancel*\r\nRoom Number:";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // roomnum
+            // 
+            this.roomnum.Location = new System.Drawing.Point(253, 243);
+            this.roomnum.Name = "roomnum";
+            this.roomnum.Size = new System.Drawing.Size(183, 20);
+            this.roomnum.TabIndex = 19;
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1297, 639);
+            this.Controls.Add(this.roomnum);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Editbtn);
             this.Controls.Add(this.ReservationDisplay);
             this.Controls.Add(this.cancelReservationtb);
@@ -215,5 +241,7 @@
         private System.Windows.Forms.DateTimePicker checkintb;
         private System.Windows.Forms.DataGridView ReservationDisplay;
         private System.Windows.Forms.Button Editbtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox roomnum;
     }
 }

@@ -267,6 +267,11 @@ namespace Hotel_Project_380
         {
             Application.Exit();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 #endregion

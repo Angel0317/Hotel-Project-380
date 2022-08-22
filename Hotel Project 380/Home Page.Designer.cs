@@ -365,7 +365,8 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(161, 96);
             this.label4.TabIndex = 55;
-            this.label4.Text = "Presidential Suite  \r\n3 King Beds\r\nMax Guests 6\r\n$5000.00 avg/night\r\n";
+            this.label4.Text = "Presidential Suite  \r\n3 King Beds\r\nMax Guests 4\r\n$5000.00 avg/night\r\n";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
