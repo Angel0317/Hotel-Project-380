@@ -32,25 +32,25 @@ namespace Hotel_Project_380
         private void Savebtn_Click(object sender, EventArgs e)
         {
           
-            if (Nametxt.Text == "")
-            {
-                MessageBox.Show("Please fill information information.");
-            }
-            else
-            {
-                int num = 101;
-                MessageBox.Show(first_name);
+            //if (Nametxt.Text == "")
+            //{
+            //    MessageBox.Show("Please fill information information.");
+            //}
+            //else
+            //{
+            //    int num = 101;
+            //    MessageBox.Show(first_name);
 
-                Con.Open();
-                //String query = "UPDATE Cart_Table SET FirstName = '" + firsttxt.Text + "', LastName = '" + lasttxt.Text + "', Address = '" + address_txt.Text + "', PhoneNumber = '" + numbertxt.Text + "', " +
-                //    "ZipCode = '" + zipcode_txt.Text + "', State = '" + state_txt.Text + "' WHERE Email = '" + email.ToString() + "' ";
-                SqlCommand save = new SqlCommand("UPDATE Cart_Table SET LastName = '"+Nametxt.Text+"' WHERE RoomNumber = '"+num+"'", Con);
-                save.ExecuteNonQuery();
-                Con.Close();
-                MessageBox.Show("Information Updated!");
-                this.Close();
+            //    Con.Open();
+            //    //String query = "UPDATE Cart_Table SET FirstName = '" + firsttxt.Text + "', LastName = '" + lasttxt.Text + "', Address = '" + address_txt.Text + "', PhoneNumber = '" + numbertxt.Text + "', " +
+            //    //    "ZipCode = '" + zipcode_txt.Text + "', State = '" + state_txt.Text + "' WHERE Email = '" + email.ToString() + "' ";
+            //    SqlCommand save = new SqlCommand("UPDATE Cart_Table SET LastName = '"+Nametxt.Text+"' WHERE RoomNumber = '"+num+"'", Con);
+            //    save.ExecuteNonQuery();
+            //    Con.Close();
+            //    MessageBox.Show("Information Updated!");
+            //    this.Close();
 
-            }
+            //}
         }
 
         private void Save_edit_Load(object sender, EventArgs e)

@@ -121,10 +121,17 @@ namespace Hotel_Project_380
             }
             else
             {
+                string Myquery = "select * from Cart_Table where Email = '" + emailreservationtb.Text + "'";
+                SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+                SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
+                var edit = new DataSet();
+                da.Fill(edit);
+                ReservationDisplay.DataSource = edit.Tables[0];
                 MessageBox.Show("Cannot find reservation, please try again :)");
             }
+          
             Con.Close();
-            //and Checkin = '"+checkintb+"'
+         
         }
 
         /// <summary>
@@ -147,7 +154,6 @@ namespace Hotel_Project_380
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            sendMailToCustomer(lastnametb.Text, emailreservationtb.Text);
             /*
              * Selected reservation from CheckedListBox1 will be deleted from database
              * I.E. cancelling the reservation
@@ -158,17 +164,32 @@ namespace Hotel_Project_380
             }
             else
             {
-                Con.Open();
-                String query = "delete from Cart_Table where Email =" + EmailAddresstb.Text + "";
-                SqlCommand cmd = new SqlCommand(query, Con);
-                cmd.ExecuteNonQuery();
-                string update_room = "UPDATE RoomInfo_Table SET CheckIn = NULL, CheckOut = NULL WHERE RoomNumber = '" + roomnum.Text + "'";
-                SqlCommand reset_room = new SqlCommand(update_room, Con);
-                reset_room.ExecuteNonQuery();
-                MessageBox.Show("Reservation Deleted");
-                Con.Close();
+                sendMailToCustomer(lastnametb.Text, emailreservationtb.Text);
+                SqlCommand myCommand = new SqlCommand("SELECT COUNT(*) FROM Cart_Table WHERE RoomNumber = '" + roomnum.Text + "' and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "'", Con);
+                myCommand.Connection.Open();
+                object obj = myCommand.ExecuteScalar();
+                if (Convert.ToInt32(obj) > 0)
+                {
+                    String query = "delete from Cart_Table where Email =" + EmailAddresstb.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    string update_room = "UPDATE RoomInfo_Table SET CheckIn = NULL, CheckOut = NULL WHERE RoomNumber = '" + roomnum.Text + "'";
+                    SqlCommand reset_room = new SqlCommand(update_room, Con);
+                    reset_room.ExecuteNonQuery();
+                    MessageBox.Show("Reservation Deleted");
+                }
+                else
+                {
+                    string Myquery = "select * from Cart_Table where Email = '" + emailreservationtb.Text + "'";
+                    SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+                    SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
+                    var edit = new DataSet();
+                    da.Fill(edit);
+                    ReservationDisplay.DataSource = edit.Tables[0];
+                    MessageBox.Show("No reservation was found to cancel");
+                }
+                myCommand.Connection.Close();
             }
-
 
 
         }

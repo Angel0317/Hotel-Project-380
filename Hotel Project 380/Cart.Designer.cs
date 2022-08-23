@@ -240,7 +240,7 @@
             this.Summary.Dock = System.Windows.Forms.DockStyle.Right;
             this.Summary.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Summary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Summary.Location = new System.Drawing.Point(737, 0);
+            this.Summary.Location = new System.Drawing.Point(766, 0);
             this.Summary.Margin = new System.Windows.Forms.Padding(2);
             this.Summary.Name = "Summary";
             this.Summary.Padding = new System.Windows.Forms.Padding(2);
@@ -663,7 +663,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1046, 500);
+            this.ClientSize = new System.Drawing.Size(1075, 500);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);

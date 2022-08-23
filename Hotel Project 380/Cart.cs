@@ -83,7 +83,6 @@ namespace Hotel_Project_380
 
         private void checkOut_Click(object sender, EventArgs e)
         {
-            sendMailToCustomer(lastName.Text, emailtxt.Text);
 
             if (firstName.Text == "" || lastName.Text == "" || addresstxt.Text == "" || phonetxt.Text == "" || emailtxt.Text == "" || zipcodetxt.Text == "" || statetxt.Text == "")
             {
@@ -95,7 +94,7 @@ namespace Hotel_Project_380
             }
             else
             {
-
+                sendMailToCustomer(lastName.Text, emailtxt.Text);
                 string num = " ";
                 cart.Open();
                 SqlCommand room_num = new SqlCommand(" SELECT TOP 1 * FROM RoomInfo_Table WHERE RoomType = '" + typeofroom.ToString() + "' and CheckIn IS NULL and CheckOut IS NULL", cart);
@@ -161,7 +160,7 @@ namespace Hotel_Project_380
             }
         }
 
-            private void Cart_Load(object sender, EventArgs e)
+        private void Cart_Load(object sender, EventArgs e)
         {
 
         }
