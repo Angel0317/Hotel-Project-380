@@ -30,8 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenu = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
+=======
+           // this.iconButton8 = new FontAwesome.Sharp.IconButton();
+>>>>>>> Stashed changes
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -53,8 +57,12 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+<<<<<<< Updated upstream
             this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.iconButton8);
+=======
+           // this.panelMenu.Controls.Add(this.iconButton8);
+>>>>>>> Stashed changes
             this.panelMenu.Controls.Add(this.iconButton6);
             this.panelMenu.Controls.Add(this.iconButton4);
             this.panelMenu.Controls.Add(this.iconButton3);
@@ -93,6 +101,7 @@
             // 
             // iconButton8
             // 
+<<<<<<< Updated upstream
             this.iconButton8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.iconButton8.FlatAppearance.BorderSize = 0;
             this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -112,6 +121,29 @@
             this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton8.UseVisualStyleBackColor = true;
+=======
+            //this.iconButton8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            //this.iconButton8.FlatAppearance.BorderSize = 0;
+            //this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.iconButton8.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.iconButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            //this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            //this.iconButton8.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            //this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            //this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //this.iconButton8.Location = new System.Drawing.Point(0, 566);
+            //this.iconButton8.Margin = new System.Windows.Forms.Padding(2);
+            //this.iconButton8.Name = "iconButton8";
+            //this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            //this.iconButton8.Size = new System.Drawing.Size(226, 47);
+            //this.iconButton8.TabIndex = 7;
+            //this.iconButton8.Tag = "Sign Out";
+            //this.iconButton8.Text = "iconButton8";
+            //this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            //this.iconButton8.UseVisualStyleBackColor = true;
+            //this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
+>>>>>>> Stashed changes
             // 
             // iconButton6
             // 
@@ -343,6 +375,10 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+<<<<<<< Updated upstream
+=======
+            //this.Load += new System.EventHandler(this.Form1_Load);
+>>>>>>> Stashed changes
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

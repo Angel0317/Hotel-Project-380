@@ -62,6 +62,8 @@ namespace Hotel_Project_380
 
         private void checkOut_Click(object sender, EventArgs e)
         {
+            sendMailToCustomer(lastName.Text, emailtxt.Text);
+
             if (firstName.Text == "" || lastName.Text == "" || addresstxt.Text == "" || phonetxt.Text == "" || emailtxt.Text == "" || zipcodetxt.Text == "" || statetxt.Text == "")
             {
                 MessageBox.Show("Please fill information text.");
@@ -84,7 +86,30 @@ namespace Hotel_Project_380
         
         }
 
+<<<<<<< Updated upstream
         private void Cart_Load(object sender, EventArgs e)
+=======
+        protected void sendMailToCustomer(String name, string email)
+        {
+            MailMessage msg = new MailMessage();
+            msg.From = new MailAddress("BlissHotel01@gmail.com");
+            msg.To.Add(email);
+            msg.Subject = "Bliss Hotel Reservation Email";
+            msg.Body = "<h2>Bliss Hotel: Congration! your reservation has been confirmed.</h2>" + "<h3> \n Dear Mr./Ms.</h3>" + name + "<h3>, thank you for staying with us. </h3>";
+            msg.IsBodyHtml = true;
+            msg.ReplyToList.Add(new MailAddress(email, name));
+
+            using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
+            {
+
+                smtp.Credentials = new NetworkCredential("BlissHotel01@gmail.com", " kkvjnveupeyffqll");
+                smtp.EnableSsl = true;
+                smtp.Send(msg);
+            }
+
+        }
+            private void Cart_Load(object sender, EventArgs e)
+>>>>>>> Stashed changes
         {
 
         }

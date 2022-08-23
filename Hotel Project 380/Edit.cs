@@ -111,7 +111,19 @@ namespace Hotel_Project_380
              * Selected reservation from CheckedListBox1 will be deleted from database
              * I.E. cancelling the reservation
              */
+<<<<<<< Updated upstream
         }
+=======
+
+            sendMailToCustomer(lastnametb.Text, emailreservationtb.Text);
+
+            Con.Open();
+             String query = "delete from Cart_Table where Email =" + EmailAddresstb.Text + "";
+             SqlCommand cmd = new SqlCommand(query, Con);
+             cmd.ExecuteNonQuery();
+             MessageBox.Show("Reservation Deleted");
+             Con.Close();
+>>>>>>> Stashed changes
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -121,8 +133,30 @@ namespace Hotel_Project_380
              */
             
         }
+        protected void sendMailToCustomer(String name, string email)
+        {
+            MailMessage msg = new MailMessage();
+            msg.From = new MailAddress("BlissHotel01@gmail.com");
+            msg.To.Add(email);
+            msg.Subject = "Bliss Hotel Reservation Email";
+            msg.Body = "<h2>Bliss Hotel: </h2>" + "<h3> \n Dear Mr./Ms.</h3>" + name+ "<h3> Your reservation has been cancelled. </h3>";
+            msg.IsBodyHtml = true;
+            msg.ReplyToList.Add(new MailAddress(email, name));
 
+            using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 25))
+            {
+
+                smtp.Credentials = new NetworkCredential("BlissHotel01@gmail.com", " kkvjnveupeyffqll");
+                smtp.EnableSsl = true;
+                smtp.Send(msg);
+            }
+
+<<<<<<< Updated upstream
         private void textBox1_TextChanged(object sender, EventArgs e)
+=======
+        }
+            private void ReservationDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+>>>>>>> Stashed changes
         {
             /*
              * Reservation ID from confirmation
