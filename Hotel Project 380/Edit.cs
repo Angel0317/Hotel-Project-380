@@ -224,13 +224,13 @@ namespace Hotel_Project_380
         {
             Save_edit form = new Save_edit();
             Con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Cart_Table where Email = '" + emailreservationtb.Text + "' and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "' ", Con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select COUNT(*) from Cart_Table where Email = '" + emailreservationtb.Text + "' and FirstName = '" + firstnametb.Text + "' and LastName = '" + lastnametb.Text + "' and RoomNumber = '"+roomnum.Text+"'", Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
                
-                Save_edit.instance.first_name= firstnametb.ToString();
+                Save_edit.instance.room_num = Convert.ToInt32(roomnum.Text);
 
                 form.BringToFront();
                 form.Show();

@@ -120,27 +120,24 @@ namespace Hotel_Project_380
                 cart.Close();
                 this.Close();
                 MessageBox.Show("Reservation Confirmed! :D");
-
-                ///<summary>
-                ///Sending Email
-                ///Ted Wu
-                ///8/15/2022-present
-                ///
-                /// The Sending Email function will send out the email with confirmation ID and all the reservation detail that's restored in the sql table.
-                ///
-                /// The current code is unfinished due to google close the access to the less secure app which need to connect with SMTP server with applicatoin code
-                /// But it also give out an error says SMTP server needs secure connection, currently looking into and try out some solution.
-                ///
-                /// Input value will be used as the user type in the cart, output will be the email that's sent out.
-                ///
-                /// Datat structure is used from the sql table
-                ///
-                /// </summary>
-
-           
+  
             } 
         }
-
+        ///<summary>
+        ///Sending Email
+        ///Ted Wu
+        ///8/15/2022-present
+        ///
+        /// The Sending Email function will send out the email with confirmation ID and all the reservation detail that's restored in the sql table.
+        ///
+        /// The current code is unfinished due to google close the access to the less secure app which need to connect with SMTP server with applicatoin code
+        /// But it also give out an error says SMTP server needs secure connection, currently looking into and try out some solution.
+        ///
+        /// Input value will be used as the user type in the cart, output will be the email that's sent out.
+        ///
+        /// Datat structure is used from the sql table
+        ///
+        /// </summary>
         protected void sendMailToCustomer(String name, string email)
         {
             MailMessage msg = new MailMessage();
