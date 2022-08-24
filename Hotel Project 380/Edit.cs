@@ -170,7 +170,7 @@ namespace Hotel_Project_380
                 object obj = myCommand.ExecuteScalar();
                 if (Convert.ToInt32(obj) > 0)
                 {
-                    String query = "delete from Cart_Table where Email =" + EmailAddresstb.Text + "";
+                    String query = "delete from Cart_Table where RoomNumber =" + roomnum.Text + "";
                     SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
                     string update_room = "UPDATE RoomInfo_Table SET CheckIn = NULL, CheckOut = NULL WHERE RoomNumber = '" + roomnum.Text + "'";
