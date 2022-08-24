@@ -188,9 +188,9 @@
             this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(48, 207);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 56);
+            this.label1.Size = new System.Drawing.Size(257, 56);
             this.label1.TabIndex = 18;
-            this.label1.Text = "*Required for cancel*\r\nRoom Number:";
+            this.label1.Text = "*Required for Cancel/Edit*\r\nRoom Number:";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // roomnum

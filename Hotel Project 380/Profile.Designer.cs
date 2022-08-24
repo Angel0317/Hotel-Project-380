@@ -100,7 +100,7 @@
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(160, 95);
             this.iconButton2.TabIndex = 0;
-            this.iconButton2.Text = "Sign On!";
+            this.iconButton2.Text = "Sign In!";
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click_1);
